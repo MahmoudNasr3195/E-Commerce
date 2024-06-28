@@ -9,3 +9,32 @@
 
 // Primeng Icons
 @import "primeicons/primeicons.css";
+
+$mainColor:#fc5d35;
+$lightColor : #f7f7f7;
+$colors:(
+    "main":#fc5d35,
+    "light":#f7f7f7
+);
+@each $key , $value in $colors{
+    .text-#{$key}{
+        color: $value;
+    }
+    .bg-#{$key}{
+        background-color: $value !important;
+    }
+    .border-#{$key}{
+        border-color: $value !important;
+    }
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body:lang(ar){
+    font-family: "Alexandria", sans-serif;
+}
+body:lang(en){
+    font-family: "Roboto", sans-serif;
+}
