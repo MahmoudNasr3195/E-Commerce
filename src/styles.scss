@@ -32,7 +32,11 @@ body{
 }
 body:lang(en) {
     direction: ltr;
+    letter-spacing: 1px;
 }
 body:lang(ar) {
     direction: rtl;
+}
+a{
+    text-decoration: none !important;
 }
