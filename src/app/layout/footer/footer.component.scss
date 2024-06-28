@@ -1,0 +1,19 @@
+@import "./../../../styles.scss";
+.footer{
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f8f9fa;
+
+    p{
+        color: $mainColor;
+        font-weight: bold;
+        margin-bottom: 0;
+
+        a{
+            font-size: large;
+        }
+    }
+}

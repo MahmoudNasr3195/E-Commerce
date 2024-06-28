@@ -1,0 +1,48 @@
+@import "./../../../styles.scss";
+
+.navbar{
+    .navbar-brand{
+        img{
+            max-width: 50px;
+        }
+        .app-name{
+            font-weight: 600;
+        }
+        .app-name:lang(ar){
+            margin-right: 5px;
+        }
+        .app-name:lang(en){
+            margin-left: 5px;
+        }
+    }
+    .navbar-nav{
+        .navActive{
+            color: $mainColor;
+        }
+        .nav-item{
+            .nav-link{
+                font-weight: 600;
+            }
+            .nav-link.cart{
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                position: relative;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+                .badge{
+                    position: absolute;
+                    top: -5px;
+                    right: 0;
+                    background-color: $mainColor;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
