@@ -1,0 +1,83 @@
+// ============= Form ===============
+.form-group {
+    margin-bottom: 15px;
+    span{
+        i{
+            z-index: 9 !important;
+        }
+    }
+    .alert{
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+        ul{
+            li{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.p-inputtext{
+    width: 100% !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    &:enabled:focus{
+        box-shadow: none !important;
+    }
+}
+.p-float-label label{
+    top: 0 !important;
+    background-color: #fff !important;
+    padding: 0 4px !important;
+    width: fit-content !important;
+
+    i{
+        font-size: 10px;
+    }
+}
+.p-float-label label:lang(ar){
+    right: 0.75rem !important;
+    left: unset !important;
+}
+.p-float-label label:lang(en){
+    left: 0.75rem !important;
+    right: unset !important;
+}
+.p-input-icon-left,
+.p-input-icon-right{
+    width: 100% !important;
+}
+.p-inputmask:lang(ar){
+    padding-right: 2.5rem !important;
+}
+.p-inputmask:lang(en){
+    padding-left: 2.5rem !important;
+}
+.p-inputtext.ng-dirty.ng-invalid,
+.p-inputtext.ng-invalid.ng-touched,
+.p-password-mask.ng-dirty.ng-invalid .p-inputtext,
+.p-password-mask.ng-invalid.ng-touched .p-inputtext{
+    border-color: #e24c4c;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+.p-password-mask eyeicon:lang(ar){
+    right: unset !important;
+    left:0.75rem!important;
+}
+.p-password-mask eyeicon:lang(en){
+    right: 0.75rem !important;
+    left:unset!important;
+}
+.p-password-mask eyeslashicon:lang(ar){
+    right: unset !important;
+    left:0.75rem!important;
+}
+.p-password-mask eyeslashicon:lang(en){
+    right: 0.75rem !important;
+    left:unset!important;
+}
+app-login .p-password-mask .p-password-panel{
+    display: none !important;
+}
+// =================== End Form ===================

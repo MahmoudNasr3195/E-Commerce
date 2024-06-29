@@ -10,33 +10,59 @@
 // Primeng Icons
 @import "primeicons/primeicons.css";
 
-$mainColor:#0077b6;
+$mainColor: #0077b6;
 $lightColor : #f7f7f7;
-$colors:(
+$orangeColor : #ec6449;
+$colors: (
     "main":#0077b6,
     "light":#f7f7f7
 );
-@each $key , $value in $colors{
-    .text-#{$key}{
+
+@each $key , $value in $colors {
+    .text-#{$key} {
         color: $value;
     }
-    .bg-#{$key}{
+
+    .bg-#{$key} {
         background-color: $value !important;
     }
-    .border-#{$key}{
+
+    .border-#{$key} {
         border-color: $value !important;
     }
 }
-body{
+
+body {
     font-family: "Tajawal", sans-serif !important;
 }
+
 body:lang(en) {
     direction: ltr;
     letter-spacing: 1px;
 }
+
 body:lang(ar) {
     direction: rtl;
 }
-a{
+
+a {
     text-decoration: none !important;
+}
+
+.btn-main {
+    background-color: $mainColor;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: white;
+        color: $mainColor;
+        border-color: $mainColor;
+    }
 }

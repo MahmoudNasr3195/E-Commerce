@@ -1,11 +1,8 @@
 @import "./../../../styles.scss";
 .footer{
     padding: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     background-color: #f8f9fa;
+    z-index: 99;
 
     p{
         color: $mainColor;
@@ -14,6 +11,10 @@
 
         a{
             font-size: large;
+        }
+        .designer{
+            color: $orangeColor;
+            margin:0 5px;
         }
     }
 }
