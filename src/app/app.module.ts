@@ -7,6 +7,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { TopBarComponent } from './layout/top-bar/top-bar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { TopBarComponent } from './layout/top-bar/top-bar.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    TranslateModule.forRoot()
+    TranslateModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

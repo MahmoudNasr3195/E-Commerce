@@ -23,7 +23,7 @@
                 <div class="form-group">
                     <span [ngClass]="lang=='ar'?'p-input-icon-right':'p-input-icon-left'" class="p-float-label">
                         <i class="pi pi-user"></i>
-                        <input type="text" pInputText id="name" formControlName="name"/>
+                        <input type="text" pInputText pAutoFocus [autofocus]="true" id="name" formControlName="name"/>
                         <label htmlFor="name">{{'FORM.NAME'|translate}}</label>
                     </span>
                     <div class="alert alert-danger mb-1 p-0" *ngIf="form['name']?.errors && (form['name']?.dirty || form['name']?.touched)">
@@ -69,27 +69,27 @@
                 <div class="form-group">
                     <span [ngClass]="lang=='ar'?'p-input-icon-right':'p-input-icon-left'" class="p-float-label">
                         <i class="pi pi-lock"></i>
-                        <p-password id="repassword" formControlName="repassword"  [toggleMask]="true"></p-password>
-                        <label htmlFor="repassword">{{'FORM.RE_PASSWORD'|translate}}</label>
+                        <p-password id="rePassword" formControlName="rePassword"  [toggleMask]="true"></p-password>
+                        <label htmlFor="rePassword">{{'FORM.RE_PASSWORD'|translate}}</label>
                     </span>
-                    <div class="alert alert-danger mb-1 p-0" *ngIf="form['repassword']?.errors && (form['repassword']?.dirty || form['repassword']?.touched)">
+                    <div class="alert alert-danger mb-1 p-0" *ngIf="form['rePassword']?.errors && (form['rePassword']?.dirty || form['rePassword']?.touched)">
                         <ul class="mb-0">
-                            <li *ngIf="form['repassword']?.errors?.['required']">{{'FORM.VALIDATORS.REQUIRED' |translate}}</li>
-                            <li *ngIf="form['repassword']?.errors?.['pattern']"> {{'FORM.VALIDATORS.PASSWORD_PATTERN' |translate}}
+                            <li *ngIf="form['rePassword']?.errors?.['required']">{{'FORM.VALIDATORS.REQUIRED' |translate}}</li>
+                            <li *ngIf="form['rePassword']?.errors?.['pattern']"> {{'FORM.VALIDATORS.PASSWORD_PATTERN' |translate}}
                                 <ul>
                                     <li>{{'FORM.VALIDATORS.PASSWORD_PATTERN1' |translate}}</li>
                                     <li>{{'FORM.VALIDATORS.PASSWORD_PATTERN2' |translate}}</li>
                                     <li>{{'FORM.VALIDATORS.PASSWORD_PATTERN3' |translate}}</li>
                                 </ul>
                             </li>
-                            <li *ngIf="form['repassword']?.errors?.['compare']"> {{'FORM.VALIDATORS.PASSWORD_NOT_MATCH' |translate}}</li>
+                            <li *ngIf="form['rePassword']?.errors?.['compare']"> {{'FORM.VALIDATORS.PASSWORD_NOT_MATCH' |translate}}</li>
                         </ul>
                     </div>
                 </div>
                 <div class="form-group">
                     <span [ngClass]="lang=='ar'?'p-input-icon-right':'p-input-icon-left'" class="p-float-label">
                         <i class="pi pi-phone"></i>
-                        <p-inputMask type="tel" mask="059-9999999" placeholder="059-9999999" id="phone" formControlName="phone"></p-inputMask>
+                        <p-inputMask type="tel" mask="019-99999999" placeholder="059-99999999" id="phone" formControlName="phone"></p-inputMask>
                         <label htmlFor="phone">{{'FORM.PHONE'|translate}}</label>
                     </span>
                     <div class="alert alert-danger mb-1 p-0" *ngIf="form['phone']?.errors && (form['phone']?.dirty || form['phone']?.touched)">

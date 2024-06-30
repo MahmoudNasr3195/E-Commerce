@@ -23,7 +23,7 @@
                 <div class="form-group">
                     <span [ngClass]="lang=='ar'?'p-input-icon-right':'p-input-icon-left'" class="p-float-label">
                         <i class="pi pi-envelope"></i>
-                        <input type="email" pInputText id="email" formControlName="email" />
+                        <input type="email" pInputText pAutoFocus [autofocus]="true" id="email" formControlName="email" />
                         <label htmlFor="email">{{'FORM.EMAIL'|translate}}</label>
                     </span>
                     <div class="alert alert-danger mb-1 p-0" *ngIf="form['email']?.errors && (form['email']?.dirty || form['email']?.touched)">
