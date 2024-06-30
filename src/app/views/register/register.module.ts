@@ -8,7 +8,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { InputMaskModule } from 'primeng/inputmask';
 import { PasswordModule } from 'primeng/password';
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
-
+import { HttpClientModule} from '@angular/common/http';
+import { AutoFocusModule } from 'primeng/autofocus';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
     InputTextModule,
     InputMaskModule,
     PasswordModule,
-    RxReactiveFormsModule
+    AutoFocusModule,
+    RxReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class RegisterModule { }

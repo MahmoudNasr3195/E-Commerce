@@ -6,7 +6,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
-
+import { AutoFocusModule } from 'primeng/autofocus';
 @NgModule({
   declarations: [
     LoginComponent
@@ -18,6 +18,7 @@ import { PasswordModule } from 'primeng/password';
     TranslateModule.forChild(),
     InputTextModule,
     PasswordModule,
+    AutoFocusModule
   ]
 })
 export class LoginModule { }
