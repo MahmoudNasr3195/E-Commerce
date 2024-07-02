@@ -26,6 +26,7 @@ import { AutoFocusModule } from 'primeng/autofocus';
     AutoFocusModule,
     RxReactiveFormsModule,
     HttpClientModule
-  ]
+  ],
+  providers:[]
 })
 export class RegisterModule { }

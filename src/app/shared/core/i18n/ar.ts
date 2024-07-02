@@ -43,8 +43,14 @@ export const locale = {
         NOT_VALID_EMAIL:'ايميل غير صحيح',
         PASSWORD_PATTERN:'كلمة المرور غير مطابقة',
         PASSWORD_PATTERN1:'يجب مراعاه اول حرف يكون كبير',
-        PASSWORD_PATTERN2:'اقل عدد حروف مسموح به 4 حروف',
-        PASSWORD_PATTERN3:'اقصي عدد حروف مسموح به هو 8'
+        PASSWORD_PATTERN2:'اقل عدد حروف مسموح به 6 حروف',
+        PASSWORD_PATTERN3:'اقصي عدد حروف مسموح به هو 12'
+      },
+      DIALOG_MESSAGE:{
+        ERROR_MESSAGE:'رسالة خطأ',
+        SUCCESS:'نجاح',
+        OK:'موافق',
+        REGISTRATION_SUCCESS:'تم التسجيل بنجاح'
       }
     },
     LOGIN:{

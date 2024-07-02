@@ -43,8 +43,14 @@ export const locale = {
         NOT_VALID_EMAIL:'Email Not Valid',
         PASSWORD_PATTERN:'Password Not Valid',
         PASSWORD_PATTERN1:'Password Must Start With Capital Letter',
-        PASSWORD_PATTERN2:'Min Length is 3 char',
-        PASSWORD_PATTERN3:'Max Length is 8 char'
+        PASSWORD_PATTERN2:'Min Length is 6 char',
+        PASSWORD_PATTERN3:'Max Length is 12 char'
+      },
+      DIALOG_MESSAGE:{
+        ERROR_MESSAGE:'Error Message',
+        SUCCESS:'Success',
+        OK:'Ok',
+        REGISTRATION_SUCCESS:'Successfully Registered'
       }
     },
     LOGIN:{
