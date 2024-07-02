@@ -50,7 +50,8 @@ export const locale = {
         ERROR_MESSAGE:'رسالة خطأ',
         SUCCESS:'نجاح',
         OK:'موافق',
-        REGISTRATION_SUCCESS:'تم التسجيل بنجاح'
+        REGISTRATION_SUCCESS:'تم التسجيل بنجاح',
+        LOGIN_SUCCESS:'تم الدخول بنجاح',
       }
     },
     LOGIN:{
