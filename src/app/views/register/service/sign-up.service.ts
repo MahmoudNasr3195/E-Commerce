@@ -11,7 +11,6 @@ export class SignUpService {
   constructor(private _httpClient:HttpClient) {}
 
   signUp(data:SignUpDTO):Observable<any>{
-    debugger
     return this._httpClient.post(`https://ecommerce.routemisr.com/api/v1/auth/signup`,data);
   }
 }

@@ -1,3 +1,4 @@
+@import "./../../../styles.scss";
 // ============= Form ===============
 .form-group {
     margin-bottom: 15px;
@@ -53,8 +54,16 @@
 .p-inputmask:lang(en){
     padding-left: 2.5rem !important;
 }
+.p-input-icon-right > .p-inputtext:lang(ar){
+    padding-right: 2.5rem !important;
+}
+.p-input-icon-right > .p-inputtext:lang(en){
+    padding-left: 2.5rem !important;
+}
 .p-inputtext.ng-dirty.ng-invalid,
 .p-inputtext.ng-invalid.ng-touched,
+.p-elementt.ng-dirty.ng-invalid .p-inputmask,
+.p-element.ng-invalid.ng-touched .p-inputmask,
 .p-password-mask.ng-dirty.ng-invalid .p-inputtext,
 .p-password-mask.ng-invalid.ng-touched .p-inputtext{
     border-color: #e24c4c;
@@ -79,5 +88,51 @@
 }
 app-login .p-password-mask .p-password-panel{
     display: none !important;
+}
+@media (prefers-reduced-motion: reduce){
+    .pi-spin{
+        animation-duration: 1s !important; 
+        animation-iteration-count: infinite !important;
+    }
+
+}
+// ---Dialog ----
+.errorDialog {
+    .p-dialog{
+        .p-dialog-header{
+            color: #721c24;
+            background: #f8d7da;
+            border-color: #f5c6cb;
+            padding: .5rem;
+            font-family: $mainFont;
+            font-weight: bold;
+            .p-dialog-header-icon{
+                color: #721c24;
+                font-weight: bold;
+            }
+        }
+        .p-dialog-content{
+            text-align: center;
+            padding: .5rem;
+        }
+        .p-dialog-footer{
+            padding: .5rem;
+            text-align: end;
+            button{
+                background: $mainColor;
+                padding: 6px 12px;
+                color: #fff;
+                font-family: $mainFont;
+            }
+        }
+    }
+}
+// ---- Toast -----
+.p-toast-message-content{
+    direction: ltr !important;
+
+    .p-toast-message-text{
+        font-family: $mainFont;
+    }
 }
 // =================== End Form ===================

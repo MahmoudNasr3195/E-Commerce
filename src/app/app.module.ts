@@ -8,6 +8,8 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { TopBarComponent } from './layout/top-bar/top-bar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MessageService } from 'primeng/api';
+import { ToastModule } from 'primeng/toast';
 
 
 @NgModule({
@@ -22,9 +24,12 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     TranslateModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    ToastModule
   ],
-  providers: [],
+  providers:[
+    MessageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
