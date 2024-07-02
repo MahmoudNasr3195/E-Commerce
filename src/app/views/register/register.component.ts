@@ -18,7 +18,6 @@ export class RegisterComponent implements OnDestroy{
   lang = localStorage.getItem("lang");
   errorMsg:string ='';
   isLoading:boolean = false;
-  visibleDialog: boolean = false;
   signUpSubscribe:any;
 
   registerForm: FormGroup = this._formBuilder.group({

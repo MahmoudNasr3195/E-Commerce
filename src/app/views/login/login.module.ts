@@ -7,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 import { AutoFocusModule } from 'primeng/autofocus';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     LoginComponent
@@ -18,7 +19,8 @@ import { AutoFocusModule } from 'primeng/autofocus';
     TranslateModule.forChild(),
     InputTextModule,
     PasswordModule,
-    AutoFocusModule
+    AutoFocusModule,
+    HttpClientModule
   ]
 })
 export class LoginModule { }

@@ -50,7 +50,8 @@ export const locale = {
         ERROR_MESSAGE:'Error Message',
         SUCCESS:'Success',
         OK:'Ok',
-        REGISTRATION_SUCCESS:'Successfully Registered'
+        REGISTRATION_SUCCESS:'Successfully Registered',
+        LOGIN_SUCCESS:'Successfully login'
       }
     },
     LOGIN:{

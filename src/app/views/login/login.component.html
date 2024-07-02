@@ -48,7 +48,10 @@
                 <div class="forgot-password d-flex justify-content-end">
                     <a routerLink="#">{{'FORM.FORGET_PASSWORD'|translate}}</a>
                 </div>
-                <button type="submit" class="btn btn-main" [disabled]="loginForm.invalid">{{'FORM.SIGN_IN'|translate}} <i class="pi pi-sign-in mx-1"></i></button>
+                <button type="submit" class="btn btn-main" [disabled]="loginForm.invalid || isLoading">
+                    {{'FORM.SIGN_IN'|translate}}
+                    <i *ngIf="isLoading" class="pi pi-spin pi-spinner mx-1"></i><i *ngIf="!isLoading" class="pi pi-sign-in mx-1"></i>
+                </button>
             </form>
         </div>
     </div>
