@@ -9,7 +9,8 @@ export const locale = {
       LOGIN_REGISTER:'ادخل لحسابك او سجل الآن',
       WISHLIST:'المفضلة',
       HELP:'مساعدة',
-      LOCATION:'مصر - المنوفية'
+      LOCATION:'مصر - المنوفية',
+      LOGOUT:'تسجيل الخروج'
     },
     NAVBAR:{
       HOME:'الرئيسية',
