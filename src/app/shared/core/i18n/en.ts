@@ -9,7 +9,8 @@ export const locale = {
       LOGIN_REGISTER:'Login/Register',
       WISHLIST:'Wishlist',
       HELP:'Help',
-      LOCATION:'Egypt , Monofiya'
+      LOCATION:'Egypt , Monofiya',
+      LOGOUT:'Logout'
     },
     NAVBAR:{
       HOME:'Home',

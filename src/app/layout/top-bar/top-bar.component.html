@@ -2,11 +2,15 @@
     <div class="container">
         <div class="items">
             <div class="topbar-item1">
-                <a routerLink="login" class="login-register">
+                <a routerLink="login" class="login-register" *ngIf="!isLogin">
                     <img src="./assets/imges/topbar/user.svg">
                     <span>{{'TOPBAR.LOGIN_REGISTER' | translate}}</span>
                 </a>
-                <a routerLink="wishlist" class="wishlist">
+                <button (click)="signOut()" class="logout" *ngIf="isLogin">
+                    <img src="./assets/imges/topbar/logout.svg">
+                    <span>{{'TOPBAR.LOGOUT' | translate}}</span>
+                </button>
+                <a routerLink="wishlist" class="wishlist" *ngIf="isLogin">
                     <img src="./assets/imges/topbar/heart.svg">
                     <span>{{'TOPBAR.WISHLIST' | translate}}</span>
                     <span class="badge">99</span>

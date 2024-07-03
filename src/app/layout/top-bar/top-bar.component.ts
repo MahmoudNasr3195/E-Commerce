@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslationService } from 'src/app/shared/core/i18n/translation.service';
+import { SharedService } from 'src/app/shared/services/shared.service';
 import { UtilService } from 'src/app/shared/services/util.service';
 
 @Component({
@@ -9,11 +10,20 @@ import { UtilService } from 'src/app/shared/services/util.service';
 })
 export class TopBarComponent implements OnInit {
   lang: string = '';
+  isLogin:boolean = false;
   constructor(
     private _utilService: UtilService,
-    private _translationService: TranslationService
+    private _translationService: TranslationService,
+    private _sharedService:SharedService
   ){}
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this._sharedService.userToken.subscribe({
+      next:() =>{
+       if(this._sharedService.userToken.getValue()) this.isLogin = true
+       else this.isLogin = false
+      }
+    })
+  }
 
   setLanguage() {
     let lang = localStorage.getItem("lang");
@@ -35,6 +45,10 @@ export class TopBarComponent implements OnInit {
     //this.reloadCurrentRoute();
     // Lang
     this.lang = lang;
+  }
+
+  signOut(){
+    this._sharedService.signOut();
   }
 
 }
