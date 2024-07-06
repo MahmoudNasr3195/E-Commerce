@@ -64,6 +64,11 @@ export const locale = {
       CREATE_ACOUNT:'Create Account',
       WELCOME_TITLE:'Welcome Back !',
       WELCOME_DESC:'To Keep Connected With Us Please Login With Your Personal Info'
+    },
+    PRODUCTS:{
+      ADD_TO_CART:'Add To Cart',
+      ADD_TO_WISHLIST:'Add To Wishlist',
+      IN_STOCK:'In Stock'
     }
   }
 }

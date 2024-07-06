@@ -64,6 +64,11 @@ export const locale = {
       CREATE_ACOUNT:'إنشاء حساب',
       WELCOME_TITLE:'مرحبًا بعودتك',
       WELCOME_DESC:'للبقاء على اتصال معنا يرجى تسجيل الدخول بمعلوماتك الشخصية'
+    },
+    PRODUCTS:{
+      ADD_TO_CART:'اضف الي العربة',
+      ADD_TO_WISHLIST:'اضف الي المفضلة',
+      IN_STOCK:'في المخزن'
     }
   }
 }

@@ -40,7 +40,11 @@
             &:hover {
                 color: $mainColor;
             }
-
+            @media (max-width: 768px) {
+                &{
+                    padding: 8px 2px !important;
+                }
+            }
             .badge {
                 background-color: #0077b6;
                 color: #fff;
