@@ -1,6 +1,6 @@
 @import "./../../../styles.scss";
 .footer{
-    padding: 12px;
+    padding:20px 12px;
     background-color: #f8f9fa;
     z-index: 99;
 
@@ -8,6 +8,7 @@
         color: $mainColor;
         font-weight: bold;
         margin-bottom: 0;
+        font-size: 18px;
 
         a{
             font-size: large;

@@ -48,10 +48,11 @@ body:lang(ar) {
 
 a {
     text-decoration: none !important;
+    color: unset !important;
 }
 
 .btn-main {
-    background-color: $mainColor;
+    background-color: $mainColor !important;
     color: white;
     border: 1px solid white;
     border-radius: 10px;
@@ -62,9 +63,9 @@ a {
     transition: background-color 0.3s;
 
     &:hover {
-        background-color: white;
-        color: $mainColor;
-        border-color: $mainColor;
+        background-color: white !important;
+        color: $mainColor !important;
+        border-color: $mainColor !important;
     }
 }
 html, body { height: 100%; }

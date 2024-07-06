@@ -14,7 +14,7 @@ import { Subscriber } from 'rxjs';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss', './../../shared/style/authStyle.scss']
 })
-export class RegisterComponent implements OnDestroy{
+export class RegisterComponent{
   lang = localStorage.getItem("lang");
   errorMsg:string ='';
   isLoading:boolean = false;
@@ -61,9 +61,5 @@ export class RegisterComponent implements OnDestroy{
         }
       })
     }
-  }
-
-  ngOnDestroy(): void {
-    this.signUpSubscribe.unsubscribe();
   }
 }

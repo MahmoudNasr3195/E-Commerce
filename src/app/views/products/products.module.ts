@@ -1,8 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { ProductsRoutingModule } from './products-routing.module';
 import { ProductsComponent } from './products.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DataViewModule, DataViewLayoutOptions } from 'primeng/dataview';
+import { RatingModule } from 'primeng/rating';
+import { TagModule } from 'primeng/tag';
+import { FormsModule } from '@angular/forms';
+import { ButtonModule } from 'primeng/button';
+import { SkeletonModule } from 'primeng/skeleton';
+import { TooltipModule } from 'primeng/tooltip';
+import { TranslateModule } from '@ngx-translate/core';
+
 
 
 @NgModule({
@@ -11,7 +20,16 @@ import { ProductsComponent } from './products.component';
   ],
   imports: [
     CommonModule,
-    ProductsRoutingModule
+    ProductsRoutingModule,
+    HttpClientModule,
+    DataViewModule,
+    RatingModule,
+    TagModule,
+    FormsModule,
+    ButtonModule,
+    SkeletonModule,
+    TooltipModule,
+    TranslateModule.forChild(),
   ]
 })
 export class ProductsModule { }

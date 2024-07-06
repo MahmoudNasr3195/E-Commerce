@@ -136,3 +136,50 @@ app-login .p-password-mask .p-password-panel{
     }
 }
 // =================== End Form ===================
+
+// ============== Data View ==============
+.p-button:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+.p-dataview .p-dataview-header{
+    background-color: transparent !important;
+    border: none !important;
+}
+.p-dataview.p-dataview-list .p-dataview-content > .p-grid > div{
+    border: none !important;
+}
+.p-dataview-layout-options{
+    display: flex;
+}
+.p-dataview-layout-options:lang(ar){
+    flex-direction: row-reverse;
+}
+.p-dataview-layout-options:lang(en){
+    flex-direction: row;
+}
+.p-selectbutton .p-button.p-highlight{
+    background-color: $mainColor;
+    color: white;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: white;
+        color: $mainColor;
+        border-color: $mainColor;
+    }
+}
+.p-dataview-content .p-grid .p-skeleton,
+.p-dataview-content .p-grid img{
+    width: 10rem !important;
+    height: 13rem !important;
+}
+// ============== Tooltip ==============
+.p-tooltip-text{
+    font-family: $mainFont;
+    font-size: 14px;
+}
+// ================ tag ==========
+.p-tag-value{
+    font-family: $mainFont;
+}

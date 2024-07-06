@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
@@ -11,7 +11,7 @@ import { SharedService } from 'src/app/shared/services/shared.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss', './../../shared/style/authStyle.scss']
 })
-export class LoginComponent {
+export class LoginComponent{
   lang = localStorage.getItem("lang");
   errorMsg: string = '';
   isLoading: boolean = false;
@@ -59,9 +59,4 @@ export class LoginComponent {
       })
     }
   }
-
-  ngOnDestroy(): void {
-    this.signIpSubscribe.unsubscribe();
-  }
-
 }
