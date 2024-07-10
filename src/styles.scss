@@ -34,6 +34,7 @@ $colors: (
 }
 
 body {
+    min-height: 100vh !important;
     font-family: "Tajawal", sans-serif !important;
 }
 
@@ -46,9 +47,12 @@ body:lang(ar) {
     direction: rtl;
 }
 
-a {
+a{
     text-decoration: none !important;
     color: unset !important;
+    &:hover{
+        cursor: pointer !important;
+    }
 }
 
 .btn-main {
@@ -61,6 +65,7 @@ a {
     cursor: pointer;
     font-weight: 500;
     transition: background-color 0.3s;
+    font-family: $mainFont !important;
 
     &:hover {
         background-color: white !important;
@@ -68,5 +73,8 @@ a {
         border-color: $mainColor !important;
     }
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.pointerCard:hover{
+    cursor: pointer !important;
+}
+
+

@@ -16,6 +16,7 @@ export const locale = {
       HOME:'Home',
       PRODUCTS:'Products',
       CATEGORIES:'Categories',
+      SUBCATEGORIES:'Sub Categories',
       BRANDS:'Brands',
       CART:'Cart'
     },
@@ -68,7 +69,8 @@ export const locale = {
     PRODUCTS:{
       ADD_TO_CART:'Add To Cart',
       ADD_TO_WISHLIST:'Add To Wishlist',
-      IN_STOCK:'In Stock'
+      IN_STOCK:'In Stock',
+       RELATED_PRODUCT:'Related Products'
     }
   }
 }

@@ -15,7 +15,8 @@ export const locale = {
     NAVBAR:{
       HOME:'الرئيسية',
       PRODUCTS:'المنتجات',
-      CATEGORIES:'الاقسام',
+      CATEGORIES:'الفئات',
+      SUBCATEGORIES:'الفئات الفرعية',
       BRANDS:'البرندات',
       CART:'قائمة التسوق'
     },
@@ -68,7 +69,8 @@ export const locale = {
     PRODUCTS:{
       ADD_TO_CART:'اضف الي العربة',
       ADD_TO_WISHLIST:'اضف الي المفضلة',
-      IN_STOCK:'في المخزن'
+      IN_STOCK:'في المخزن',
+      RELATED_PRODUCT:'منتجات ذات صلة'
     }
   }
 }
