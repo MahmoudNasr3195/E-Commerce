@@ -12,4 +12,9 @@ export class ProductsService {
   getAllProducts():Observable<any>{
     return this._httpClient.get(`https://ecommerce.routemisr.com/api/v1/products`);
   }
+
+  getSpecificProduct(id:string):Observable<any>{
+    return this._httpClient.get(`https://ecommerce.routemisr.com/api/v1/products/${id}`);
+  }
+  
 }

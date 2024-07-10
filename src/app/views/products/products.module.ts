@@ -11,12 +11,13 @@ import { ButtonModule } from 'primeng/button';
 import { SkeletonModule } from 'primeng/skeleton';
 import { TooltipModule } from 'primeng/tooltip';
 import { TranslateModule } from '@ngx-translate/core';
-
-
-
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { GalleriaModule } from 'primeng/galleria';
+import { BreadcrumbModule } from 'primeng/breadcrumb';
 @NgModule({
   declarations: [
-    ProductsComponent
+    ProductsComponent,
+    ProductDetailsComponent
   ],
   imports: [
     CommonModule,
@@ -30,6 +31,8 @@ import { TranslateModule } from '@ngx-translate/core';
     SkeletonModule,
     TooltipModule,
     TranslateModule.forChild(),
+    GalleriaModule,
+    BreadcrumbModule
   ]
 })
 export class ProductsModule { }
