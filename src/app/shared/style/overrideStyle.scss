@@ -210,3 +210,11 @@ app-login .p-password-mask .p-password-panel{
 .p-component{
     font-family: "Tajawal", sans-serif !important;
 }
+// ================ Categories Cards ========
+.p-card-body{
+    text-align: center;
+    margin-bottom: 0;
+}
+app-categories .p-card-content{
+    display: none;
+}

@@ -1,0 +1,27 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class CategoriesService {
+
+  constructor(private _httpClient:HttpClient) { }
+
+  getAllCategories():Observable<any>{
+    return this._httpClient.get(`https://ecommerce.routemisr.com/api/v1/categories`);
+  }
+
+  getSpecificCategory(categoryId:string):Observable<any>{
+    return this._httpClient.get(`https://ecommerce.routemisr.com/api/v1/categories/${categoryId}`);
+  }
+
+  getAllSubCategoriesOnCategory(categoryId:string):Observable<any>{
+    return this._httpClient.get(`https://ecommerce.routemisr.com/api/v1/categories/${categoryId}/subcategories`);
+  }
+
+  getAllProducts():Observable<any>{
+    return this._httpClient.get(`https://ecommerce.routemisr.com/api/v1/products`);
+  }
+}

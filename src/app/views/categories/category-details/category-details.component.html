@@ -1,1 +1,15 @@
-<p>category-details works!</p>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 sm:col-6 lg:col-5 xl:col-5">
+            <a [routerLink]="['/categories',categoryId,'subcategories']">
+                <div class="card flex justify-content-center">
+                    <p-card [header]="categoryItem?.name">
+                        <ng-template pTemplate="header">
+                            <img alt="Card" [src]="categoryItem?.image" />
+                        </ng-template>
+                    </p-card>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
