@@ -1,1 +1,20 @@
-<p>categories works!</p>
+<div class="container">
+    <div class="row justify-content-center" *ngIf="categoryList.length > 0 ; else loading">
+        <div class="col-12 sm:col-6 lg:col-4 xl:col-3" *ngFor="let category of categoryList">
+            <a [routerLink]="['categoryDetails',category.name,category._id]">
+                <div class="card flex justify-content-center">
+                    <p-card [header]="category.name">
+                        <ng-template pTemplate="header">
+                            <img alt="Card" [src]="category.image" />
+                        </ng-template>
+                    </p-card>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<ng-template #loading>
+    <div class="vh-100 d-flex justify-content-center align-items-center">
+        <i class="pi pi-spin pi-spinner text-main" style="font-size: 5rem"></i>
+    </div>
+</ng-template>
