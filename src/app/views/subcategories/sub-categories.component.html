@@ -1,1 +1,16 @@
-<h1>Hello</h1>
+<div class="container">
+    <div class="row justify-content-center" *ngIf="subCategoryList.length > 0 ; else noResultFound">
+        <div class="col-12 sm:col-6 lg:col-5 xl:col-5" *ngFor="let subcategories of subCategoryList">
+            <a [routerLink]="['subCategoryDetails',subcategories.name , subcategories._id]">
+                <div class="card flex justify-content-center">
+                    <p-card [header]="subcategories.name"></p-card>
+                </div>
+            </a>
+        </div>
+    </div>
+    <ng-template #noResultFound>
+        <div class="vh-100 d-flex justify-content-center align-items-center">
+            <h1> No Result Found</h1>
+        </div>
+    </ng-template>
+</div>

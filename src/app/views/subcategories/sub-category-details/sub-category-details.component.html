@@ -1,1 +1,16 @@
-<p>sub-category-details works!</p>
+<div class="container">
+    <div class="row justify-content-center" *ngIf="subcategoryItem ; else noResultFound">
+        <div class="col-12 sm:col-6 lg:col-5 xl:col-5">
+            <a [routerLink]="['/subCategories',subcategoryItem._id,'products']">
+                <div class="card flex justify-content-center">
+                    <p-card [header]="subcategoryItem.name"></p-card>
+                </div>
+            </a>
+        </div>
+    </div>
+    <ng-template #noResultFound>
+        <div class="vh-100 d-flex justify-content-center align-items-center">
+            <h1> No Result Found</h1>
+        </div>
+    </ng-template>
+</div>
