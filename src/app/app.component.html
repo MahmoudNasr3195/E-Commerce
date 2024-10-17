@@ -1,7 +1,7 @@
 <div>
     <p-toast></p-toast>
     <app-top-bar></app-top-bar>
-    <app-navbar></app-navbar>
+    <app-navbar *ngIf="isLogin"></app-navbar>
 </div>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
