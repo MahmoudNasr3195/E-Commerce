@@ -1,6 +1,7 @@
-.main_container{
-    overflow: hidden !important;
-    min-height: 75vh;
-    position: relative;
-    padding-bottom: 100px!important;
+:host{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    background-color: rgba(0, 119, 182,.1);
 }
