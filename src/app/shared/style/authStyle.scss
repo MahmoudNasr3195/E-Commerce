@@ -2,25 +2,11 @@
 
 .register,.login {
     position: relative;
-    background-color: rgba(0, 119, 182,.1);
     display: flex;
     justify-content: center;
     align-items: center;
     min-width: calc(100vh - 165px);
     padding: 20px 0;
-
-    .fixedImg {
-        position: absolute;
-        bottom: 0;
-        max-width: 380px;
-
-        &:lang(ar){
-            right: 0;
-        }
-        &:lang(en){
-            left: 0;
-        }
-    }
 
     .container {
         display: flex;
