@@ -3,7 +3,7 @@ export const locale = {
   data: {
     GENERAL: {
       LANGUAGE: "عربي",
-      APP_NAME:'Hayah Store'
+      APP_NAME:'HaYaH Store'
     },
     TOPBAR:{
       LOGIN_REGISTER:'Login/Register',
