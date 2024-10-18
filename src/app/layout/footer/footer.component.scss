@@ -18,8 +18,22 @@
             font-size: large;
         }
         .designer{
-            color: $orangeColor;
             margin:0 5px;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .footer{
+        .container{
+            flex-direction: column !important;
+            align-items: center;
+            justify-content: center;
+
+            p{
+                text-align: center;
+            }
         }
     }
 }

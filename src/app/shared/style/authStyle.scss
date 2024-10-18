@@ -1,13 +1,12 @@
 @import "./../../../styles.scss";
 
-.register,.login {
+.register,.login,.forgotPassword {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     min-width: calc(100vh - 165px);
     padding: 20px 0;
-
     .container {
         display: flex;
         width: 800px;
