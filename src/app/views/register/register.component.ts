@@ -51,7 +51,7 @@ export class RegisterComponent{
             this.isLoading = false;
             this._messageService.clear();
             this._messageService.add({ severity: 'success', summary: this._translateService.instant('FORM.DIALOG_MESSAGE.SUCCESS'), detail:this._translateService.instant('FORM.DIALOG_MESSAGE.REGISTRATION_SUCCESS')});
-            this._router.navigate(['/login']);
+            this._router.navigate(['/home']);
           }
         },
         error :(err)=> {

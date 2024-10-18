@@ -40,7 +40,7 @@ export class LoginComponent{
     const formData = this.loginForm.value;
     if (this.loginForm.valid && !this.isLoading) {
       this.isLoading = true;
-      this.signIpSubscribe = this._signInService.signIn(this.loginForm.value).subscribe({
+      this.signIpSubscribe = this._signInService.signIn(formData).subscribe({
         next: (res: any) => {
           if (res.message == "success") {
             this.isLoading = false;
@@ -54,7 +54,7 @@ export class LoginComponent{
         error: (err) => {
           this.isLoading = false;
           this._messageService.clear();
-          this._messageService.add({ severity: 'error', summary: this._translateService.instant('FORM.DIALOG_MESSAGE.ERROR_MESSAGE'), detail: err.error.message, sticky: true });
+          this._messageService.add({ severity: 'error', summary: this._translateService.instant('FORM.DIALOG_MESSAGE.ERROR_MESSAGE'), detail: this._translateService.instant('FORM.DIALOG_MESSAGE.INCORRECT_EMAIL_OR_PASSWORD'), sticky: true });
         }
       })
     }

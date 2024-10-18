@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { Error404RoutingModule } from './error404-routing.module';
 import { Error404Component } from './error404.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { Error404Component } from './error404.component';
   ],
   imports: [
     CommonModule,
-    Error404RoutingModule
+    Error404RoutingModule,
+    TranslateModule.forChild(),
   ]
 })
 export class Error404Module { }
