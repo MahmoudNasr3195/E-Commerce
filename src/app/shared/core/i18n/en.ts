@@ -86,6 +86,7 @@ export const locale = {
       SEE_ALL:'See All',
       POPULAR_CATEGORIES:'Popular Categories',
       CATEGORY_DETAILS:'Category Details',
+      SUBCATEGORY_DETAILS:'Subcategory Details',
     },
     NOT_FOUND_PAGE:{
       TITLE:'UH OH! You\'re lost.',
