@@ -14,14 +14,14 @@ export class ForgotService {
   constructor(private _httpClient: HttpClient) { }
 
   forgotPasswords(data: IforgotPasswordDTO): Observable<any> {
-    return this._httpClient.post(environment.baseUrl + `/api/v1/auth/forgotPasswords`, data)
+    return this._httpClient.post(`${environment.baseUrl}/api/v1/auth/forgotPasswords`, data)
   }
 
   verifyResetCode(data: IResetCodeDTO): Observable<any> {
-    return this._httpClient.post(environment.baseUrl + `/api/v1/auth/verifyResetCode`, data)
+    return this._httpClient.post(`${environment.baseUrl}/api/v1/auth/verifyResetCode`, data)
   }
 
   resetPassword(data: IResetPassDTO): Observable<any> {
-    return this._httpClient.put(environment.baseUrl + `/api/v1/auth/resetPassword`, data)
+    return this._httpClient.put(`${environment.baseUrl}/api/v1/auth/resetPassword`, data)
   }
 }

@@ -12,6 +12,6 @@ export class SignInService {
   constructor(private _httpClient:HttpClient) {}
 
   signIn(data:SignInDTO):Observable<any>{
-    return this._httpClient.post(environment.baseUrl + `/api/v1/auth/signin`,data);
+    return this._httpClient.post(`${environment.baseUrl}/api/v1/auth/signin`,data);
   }
 }
