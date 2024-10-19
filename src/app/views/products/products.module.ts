@@ -15,6 +15,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { GalleriaModule } from 'primeng/galleria';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
 import { SearchByPipe } from 'src/app/shared/pipes/search-by.pipe';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+
 @NgModule({
   declarations: [
     ProductsComponent,
@@ -34,7 +36,8 @@ import { SearchByPipe } from 'src/app/shared/pipes/search-by.pipe';
     TranslateModule.forChild(),
     GalleriaModule,
     BreadcrumbModule,
-    SearchByPipe
+    SearchByPipe,
+    ProgressSpinnerModule
     ]
 })
 export class ProductsModule { }

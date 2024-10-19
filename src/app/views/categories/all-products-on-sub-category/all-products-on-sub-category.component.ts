@@ -17,6 +17,7 @@ export class AllProductsOnSubCategoryComponent {
   layout: string = 'list';
   contentLoaded = false;
   isthereDiscount: boolean = false;
+  searchTerm: string = '';
 
   constructor(private _categoriesService: CategoriesService, private _activatedRoute: ActivatedRoute) { }
   ngOnInit(): void {

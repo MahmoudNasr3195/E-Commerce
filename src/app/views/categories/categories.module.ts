@@ -17,6 +17,8 @@ import { RatingModule } from 'primeng/rating';
 import { SkeletonModule } from 'primeng/skeleton';
 import { TagModule } from 'primeng/tag';
 import { TooltipModule } from 'primeng/tooltip';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { SearchByPipe } from 'src/app/shared/pipes/search-by.pipe';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import { TooltipModule } from 'primeng/tooltip';
     SkeletonModule,
     TooltipModule,
     GalleriaModule,
-    BreadcrumbModule
+    BreadcrumbModule,
+    ProgressSpinnerModule,
+    SearchByPipe
   ]
 })
 export class CategoriesModule { }

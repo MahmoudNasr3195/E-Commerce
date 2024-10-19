@@ -1,16 +1,28 @@
-<div class="container">
-    <div class="row justify-content-center" *ngIf="subCategoryList.length > 0 ; else noResultFound">
-        <div class="col-12 sm:col-6 lg:col-5 xl:col-5" *ngFor="let subcategories of subCategoryList">
+<div class="container-fluid">
+    <div class="row justify-content-center" *ngIf="subCategoryList.length > 0 ; else loading">
+        <div class="col-12 sm:col-6 lg:col-4 xl:col-3" *ngFor="let subcategories of subCategoryList">
             <a [routerLink]="['subCategoryDetails',subcategories.name , subcategories._id]">
                 <div class="card flex justify-content-center">
-                    <p-card [header]="subcategories.name"></p-card>
+                    <p-card [header]="subcategories.name">
+                        <ng-template pTemplate="header">
+                            <img alt="Card" src="./assets/imges/subCategory/Shopping.svg" />
+                        </ng-template>
+                    </p-card>
                 </div>
             </a>
         </div>
     </div>
-    <ng-template #noResultFound>
+    <ng-template #loading>
         <div class="vh-100 d-flex justify-content-center align-items-center">
-            <h1> No Result Found</h1>
+            <!-- <i class="pi pi-spin pi-spinner text-main" style="font-size: 5rem"></i> -->
+            <div class="flex justify-content-center">
+                <p-progressSpinner 
+                    aria-label="Loading"
+                    styleClass="w-5rem h-5rem" 
+                    strokeWidth="4" 
+                    fill="var(--surface-ground)" 
+                    animationDuration=".5s" />
+            </div>
         </div>
     </ng-template>
 </div>

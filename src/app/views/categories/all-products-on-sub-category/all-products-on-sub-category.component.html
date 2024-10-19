@@ -1,13 +1,18 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
+        <div class="col-12">
+            <h1 class="text-center text-xl font-bold mt-5">
+                {{'PRODUCTS.RELATED_PRODUCT'|translate}}
+            </h1>
+        </div>
         <div class="card">
-            <p-dataView #dv [value]="productListOnSubCategory" [layout]="layout" *ngIf="productListOnSubCategory.length > 0 ; else noResultFound">
+            <p-dataView #dv [value]="productListOnSubCategory | searchBy : searchTerm" [layout]="layout" *ngIf="productListOnSubCategory.length > 0 ; else noResultFound">
                 <ng-template pTemplate="header">
-                    <div class="flex justify-content-start">
-                        <h4>{{'PRODUCTS.RELATED_PRODUCT' | translate}}</h4>
-                    </div>
-                    <div class="flex justify-content-end">
+                    <div class="flex col-12 sm:col-6 lg:col-6 xl:col-6">
                         <p-dataViewLayoutOptions [attr.layout]="layout"></p-dataViewLayoutOptions>
+                    </div>
+                    <div class="flex col-12 sm:col-6 lg:col-6 xl:col-6">
+                        <input type="search" [(ngModel)]="searchTerm" pInputText placeholder="{{'FORM.SEARCH'|translate}}" class="form-control w-full" />
                     </div>
                 </ng-template>
                 <ng-template let-product pTemplate="listItem">

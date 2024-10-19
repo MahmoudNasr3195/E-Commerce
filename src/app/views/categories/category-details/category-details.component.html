@@ -1,5 +1,10 @@
-<div class="container">
-    <div class="row justify-content-center">
+<div class="container-fluid">
+    <div class="row justify-content-center" *ngIf="categoryItem ; else loading">
+        <div class="col-12">
+            <h1 class="text-center text-xl font-bold mt-5">
+                {{'CATEGORIES.CATEGORY_DETAILS'|translate}}
+            </h1>
+        </div>
         <div class="col-12 sm:col-6 lg:col-5 xl:col-5">
             <a [routerLink]="['/categories',categoryId,'subcategories']">
                 <div class="card flex justify-content-center">
@@ -13,3 +18,16 @@
         </div>
     </div>
 </div>
+<ng-template #loading>
+    <div class="vh-100 d-flex justify-content-center align-items-center">
+        <!-- <i class="pi pi-spin pi-spinner text-main" style="font-size: 5rem"></i> -->
+        <div class="flex justify-content-center">
+            <p-progressSpinner 
+                aria-label="Loading"
+                styleClass="w-5rem h-5rem" 
+                strokeWidth="4" 
+                fill="var(--surface-ground)" 
+                animationDuration=".5s" />
+        </div>
+    </div>
+</ng-template>
