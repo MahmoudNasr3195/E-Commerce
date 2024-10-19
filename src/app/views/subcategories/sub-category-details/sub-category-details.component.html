@@ -3,7 +3,11 @@
         <div class="col-12 sm:col-6 lg:col-5 xl:col-5">
             <a [routerLink]="['/subCategories',subcategoryItem._id,'products']">
                 <div class="card flex justify-content-center">
-                    <p-card [header]="subcategoryItem.name"></p-card>
+                    <p-card [header]="subcategoryItem.name">
+                        <ng-template pTemplate="header">
+                            <img alt="Card" src="./assets/imges/subCategory/Shopping.svg" />
+                        </ng-template>
+                    </p-card>
                 </div>
             </a>
         </div>

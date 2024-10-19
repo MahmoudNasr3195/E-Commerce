@@ -246,9 +246,23 @@ app-all-categories {
   }
 }
 // ================ All Products Cards ========
-app-all-products{
+app-all-products,
+app-all-products-on-sub-category{
     .card {
         border: unset !important;
         margin: 10px 0;
       }
+}
+// =============== All Sub Category Cards ========
+app-subCategories,
+app-sub-category-details,
+app-all-sub-category-on-category{
+  .p-card{
+    .p-card-title{
+      color: $mainColor;
+    }
+     .p-card-body{
+      background-color: #bcd6ea;
+     }
+  }
 }

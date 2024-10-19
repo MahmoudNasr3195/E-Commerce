@@ -111,6 +111,14 @@
 
 <ng-template #loading>
     <div class="vh-100 d-flex justify-content-center align-items-center">
-        <i class="pi pi-spin pi-spinner text-main" style="font-size: 5rem"></i>
+        <!-- <i class="pi pi-spin pi-spinner text-main" style="font-size: 5rem"></i> -->
+        <div class="flex justify-content-center">
+            <p-progressSpinner 
+                aria-label="Loading"
+                styleClass="w-5rem h-5rem" 
+                strokeWidth="4" 
+                fill="var(--surface-ground)" 
+                animationDuration=".5s" />
+        </div>
     </div>
 </ng-template>
