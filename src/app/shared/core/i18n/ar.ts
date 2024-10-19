@@ -87,6 +87,7 @@ export const locale = {
       POPULAR_CATEGORIES:'الفئات الأكثر مبيعاً',
       TOP_CATEGOIES:'الفئات الأكثر مشاهدة',
       CATEGORY_DETAILS:'تفاصيل الفئة',
+      SUBCATEGORY_DETAILS:'تفاصيل الفئة الفرعية',
     },
     NOT_FOUND_PAGE:{
       TITLE:'الصفحة غير موجودة',
