@@ -26,6 +26,7 @@ export const locale = {
       MAHMOUDNASR:'م محمود نصر'
     },
     FORM:{
+      SEARCH:'ابحث عن منتج',
       EMAIL:'الإيميل',
       ENTER_YOUR_EMAIL:'من فضلك ادخل الايميل',
       PASSWROD:'كلمة المرور',
@@ -74,7 +75,17 @@ export const locale = {
       ADD_TO_CART:'اضف الي العربة',
       ADD_TO_WISHLIST:'اضف الي المفضلة',
       IN_STOCK:'في المخزن',
-      RELATED_PRODUCT:'منتجات ذات صلة'
+      RELATED_PRODUCT:'منتجات ذات صلة',
+      POPULAR_PRODULAR:'المنتجات الأكثر مبيعاً',
+    },
+    CATEGORIES:{
+      TITLE:'الفئات',
+      SUB_CATEGORIES:'الفئات الفرعية',
+      BRANDS:'البرندات',
+      PRODUCTS:'المنتجات',
+      SEE_ALL:'عرض الكل',
+      POPULAR_CATEGORIES:'الفئات الأكثر مبيعاً',
+      TOP_CATEGOIES:'الفئات الأكثر مشاهدة',
     },
     NOT_FOUND_PAGE:{
       TITLE:'الصفحة غير موجودة',

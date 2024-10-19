@@ -14,6 +14,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { GalleriaModule } from 'primeng/galleria';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
+import { SearchByPipe } from 'src/app/shared/pipes/search-by.pipe';
 @NgModule({
   declarations: [
     ProductsComponent,
@@ -32,7 +33,8 @@ import { BreadcrumbModule } from 'primeng/breadcrumb';
     TooltipModule,
     TranslateModule.forChild(),
     GalleriaModule,
-    BreadcrumbModule
-  ]
+    BreadcrumbModule,
+    SearchByPipe
+    ]
 })
 export class ProductsModule { }

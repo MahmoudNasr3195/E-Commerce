@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../services/products.service';
 import { Products } from '../interfaces/products';
 import { ActivatedRoute, Router } from '@angular/router';
-import { OwlOptions } from 'ngx-owl-carousel-o';
 import { MenuItem } from 'primeng/api';
 
 @Component({

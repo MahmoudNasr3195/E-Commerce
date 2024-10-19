@@ -26,6 +26,7 @@ export const locale = {
       MAHMOUDNASR:'Mahmoud Nasr'
     },
     FORM:{
+      SEARCH:'Search Product',
       EMAIL:'Email',
       ENTER_YOUR_EMAIL:'Enter Your Email',
       PASSWROD:'Password',
@@ -74,7 +75,16 @@ export const locale = {
       ADD_TO_CART:'Add To Cart',
       ADD_TO_WISHLIST:'Add To Wishlist',
       IN_STOCK:'In Stock',
-       RELATED_PRODUCT:'Related Products'
+       RELATED_PRODUCT:'Related Products',
+       POPULAR_PRODULAR:'Popular Products'
+    },
+    CATEGORIES:{
+      TITLE:'Categories',
+      SUB_CATEGORIES:'Sub Categories',
+      BRANDS:'Brands',
+      PRODUCTS:'Products',
+      SEE_ALL:'See All',
+      POPULAR_CATEGORIES:'Popular Categories'
     },
     NOT_FOUND_PAGE:{
       TITLE:'UH OH! You\'re lost.',

@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductsService } from './services/products.service';
-import { Products } from './interfaces/products';
+import { Products } from '../interfaces/products';
+import { HomeServiceService } from '../services/home-service.service';
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss'],
+  selector: 'app-all-products',
+  templateUrl: './all-products.component.html',
+  styleUrls: ['./all-products.component.scss']
 })
-export class ProductsComponent  implements OnInit{
+export class AllProductsComponent implements OnInit{
   lang = localStorage.getItem('lang');
   productList:Products[]=[];
   layout: string = 'list';
@@ -14,14 +14,15 @@ export class ProductsComponent  implements OnInit{
   isthereDiscount:boolean=false;
   searchTerm:string='';
 
-  constructor(private _productsService:ProductsService){}
+  constructor(private _homeService:HomeServiceService){}
+
   ngOnInit(): void {
     this.getAllProducts();
     this.contentLoadedInterval();
   }
 
   getAllProducts(){
-    this._productsService.getAllProducts().subscribe({
+    this._homeService.getAllProducts().subscribe({
       next:(response)=>{
         this.productList = response.data;
       },
@@ -35,6 +36,5 @@ export class ProductsComponent  implements OnInit{
       this.contentLoaded = true;
     }, 2000);
   }
-
-
+  
 }
