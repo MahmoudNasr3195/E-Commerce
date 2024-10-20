@@ -266,3 +266,9 @@ app-all-sub-category-on-category{
      }
   }
 }
+// ===== Brand Card ========
+app-brands {
+  .p-card .p-card-title {
+    color: $mainColor;
+  }
+}

@@ -1,1 +1,33 @@
-<p>brands works!</p>
+<div class="container-fluid">
+    <div class="row justify-content-center" *ngIf="brandsList.length > 0 ; else loading">
+        <div class="col-12">
+            <h1 class="text-center text-xl font-bold mt-5">
+                {{'CATEGORIES.BRANDS'|translate}}
+            </h1>
+        </div>
+        <div class="col-12 sm:col-6 lg:col-4 xl:col-3" *ngFor="let brand of brandsList">
+            <a [routerLink]="['brandDetails',brand.name , brand._id]">
+                <div class="card flex justify-content-center">
+                    <p-card [header]="brand.name">
+                        <ng-template pTemplate="header">
+                            <img alt="Card" [src]="brand.image" />
+                        </ng-template>
+                    </p-card>
+                </div>
+            </a>
+        </div>
+    </div>
+    <ng-template #loading>
+        <div class="vh-100 d-flex justify-content-center align-items-center">
+            <!-- <i class="pi pi-spin pi-spinner text-main" style="font-size: 5rem"></i> -->
+            <div class="flex justify-content-center">
+                <p-progressSpinner 
+                    aria-label="Loading"
+                    styleClass="w-5rem h-5rem" 
+                    strokeWidth="4" 
+                    fill="var(--surface-ground)" 
+                    animationDuration=".5s" />
+            </div>
+        </div>
+    </ng-template>
+</div>
