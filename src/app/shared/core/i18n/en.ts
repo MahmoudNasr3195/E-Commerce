@@ -59,6 +59,7 @@ export const locale = {
         REGISTRATION_SUCCESS:'Successfully Registered',
         LOGIN_SUCCESS:'Successfully login',
         INCORRECT_EMAIL_OR_PASSWORD:'Incorrect Email Or Password',
+        UNKNOWN_ERROR:'Unknown Error',
       }
     },
     LOGIN:{
@@ -87,6 +88,7 @@ export const locale = {
       POPULAR_CATEGORIES:'Popular Categories',
       CATEGORY_DETAILS:'Category Details',
       SUBCATEGORY_DETAILS:'Subcategory Details',
+      BRAND_DETAILS:'Brand Details',
     },
     NOT_FOUND_PAGE:{
       TITLE:'UH OH! You\'re lost.',

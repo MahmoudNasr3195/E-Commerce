@@ -59,6 +59,7 @@ export const locale = {
         REGISTRATION_SUCCESS:'تم التسجيل بنجاح',
         LOGIN_SUCCESS:'تم الدخول بنجاح',
         INCORRECT_EMAIL_OR_PASSWORD:'الايميل او كلمة المرور غير صحيحة',
+        UNKNOWN_ERROR:'خطأ غير معروف',
       }
     },
     LOGIN:{
@@ -88,6 +89,7 @@ export const locale = {
       TOP_CATEGOIES:'الفئات الأكثر مشاهدة',
       CATEGORY_DETAILS:'تفاصيل الفئة',
       SUBCATEGORY_DETAILS:'تفاصيل الفئة الفرعية',
+      BRAND_DETAILS:'تفاصيل البرند',
     },
     NOT_FOUND_PAGE:{
       TITLE:'الصفحة غير موجودة',
