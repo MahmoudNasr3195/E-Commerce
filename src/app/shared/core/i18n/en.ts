@@ -60,6 +60,7 @@ export const locale = {
         LOGIN_SUCCESS:'Successfully login',
         INCORRECT_EMAIL_OR_PASSWORD:'Incorrect Email Or Password',
         UNKNOWN_ERROR:'Unknown Error',
+        PRODUCT_ADDED_TO_CART:'Product Added To Cart Successfully',
       }
     },
     LOGIN:{
@@ -75,6 +76,7 @@ export const locale = {
     PRODUCTS:{
       ADD_TO_CART:'Add To Cart',
       ADD_TO_WISHLIST:'Add To Wishlist',
+      PRODUCT_DETAILS:'Product Details',
       IN_STOCK:'In Stock',
        RELATED_PRODUCT:'Related Products',
        POPULAR_PRODULAR:'Popular Products'
