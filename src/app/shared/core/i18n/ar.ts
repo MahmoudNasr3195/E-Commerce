@@ -60,6 +60,7 @@ export const locale = {
         LOGIN_SUCCESS:'تم الدخول بنجاح',
         INCORRECT_EMAIL_OR_PASSWORD:'الايميل او كلمة المرور غير صحيحة',
         UNKNOWN_ERROR:'خطأ غير معروف',
+        PRODUCT_ADDED_TO_CART:'تم اضافة المنتج الي العربة بنجاح',
       }
     },
     LOGIN:{
@@ -75,6 +76,7 @@ export const locale = {
     PRODUCTS:{
       ADD_TO_CART:'اضف الي العربة',
       ADD_TO_WISHLIST:'اضف الي المفضلة',
+      PRODUCT_DETAILS:'تفاصيل المنتج',
       IN_STOCK:'في المخزن',
       RELATED_PRODUCT:'منتجات ذات صلة',
       POPULAR_PRODULAR:'المنتجات الأكثر مبيعاً',

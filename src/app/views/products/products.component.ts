@@ -1,40 +1,75 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from './services/products.service';
 import { Products } from './interfaces/products';
+import { TranslateService } from '@ngx-translate/core';
+import { MessageService } from 'primeng/api';
+import { SharedService } from 'src/app/shared/services/shared.service';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss'],
 })
-export class ProductsComponent  implements OnInit{
+export class ProductsComponent implements OnInit {
   lang = localStorage.getItem('lang');
-  productList:Products[]=[];
+  productList: Products[] = [];
   layout: string = 'list';
   contentLoaded = false;
-  isthereDiscount:boolean=false;
-  searchTerm:string='';
+  isthereDiscount: boolean = false;
+  searchTerm: string = '';
 
-  constructor(private _productsService:ProductsService){}
+  constructor(
+    private _productsService: ProductsService,
+    private _sharedService: SharedService,
+    private _messageService: MessageService,
+    private _translateService: TranslateService
+  ) {}
   ngOnInit(): void {
     this.getAllProducts();
     this.contentLoadedInterval();
   }
 
-  getAllProducts(){
+  getAllProducts() {
     this._productsService.getAllProducts().subscribe({
-      next:(response)=>{
+      next: (response) => {
         this.productList = response.data;
       },
-      error:(error)=>{
-      }
-    })
+      error: (error) => {},
+    });
   }
 
-  contentLoadedInterval(){
+  contentLoadedInterval() {
     setTimeout(() => {
       this.contentLoaded = true;
     }, 2000);
   }
 
-
+  addProductToCart(id: string) {
+    this._sharedService.AddProductToCart(id).subscribe({
+      next: (response) => {
+        this._messageService.clear();
+        this._messageService.add({
+          severity: 'success',
+          summary: this._translateService.instant(
+            'FORM.DIALOG_MESSAGE.SUCCESS'
+          ),
+          detail: this._translateService.instant(
+            'FORM.DIALOG_MESSAGE.PRODUCT_ADDED_TO_CART'
+          ),
+        });
+      },
+      error: (error) => {
+        this._messageService.clear();
+        this._messageService.add({
+          severity: 'error',
+          summary: this._translateService.instant(
+            'FORM.DIALOG_MESSAGE.ERROR_MESSAGE'
+          ),
+          detail: this._translateService.instant(
+            'FORM.DIALOG_MESSAGE.UNKNOWN_ERROR'
+          ),
+          sticky: true,
+        });
+      },
+    });
+  }
 }
