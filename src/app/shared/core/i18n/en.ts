@@ -119,6 +119,25 @@ export const locale = {
       DESCRIPTION:'Enter your new password',
       RESET_PASSWORD:'Reset Password',
       RESET_PASSWORD_SUCCESS:'Password reset successfully'
+    },
+    CART:{
+      TITLE:'Cart',
+      EMPTY_CART:'Your Cart Is Empty',
+      CONTINUE_SHOPPING:'Continue Shopping',
+      TOTAL:'Total',
+      CHECKOUT:'Checkout',
+      PRICE:'Price',
+      QUANTITY:'Quantity',
+      TOTAL_PRICE:'Total Price',
+      REMOVE_FROM_CART:'Remove From Cart',
+      PRODUCT_DETAILS:'Product Details',
+      CART_TOTAL_PRICE:'Cart Total Price',
+      CLEAR_CART:'Clear Cart',
+      CART_EMPTY_MESSAGE:'Your Cart Is Empty',
+      ARE_YOU_SURE_TO_CLEAR_CART:'Are You Sure To Clear Cart ?',
+      DELETE_CONFIRMATION:'Delete Confirmation',
+      Cart_EMPTY_SUCCESS:'Cart Cleared Successfully',
+      CONFIRMED:'Confirmed',
     }
   }
 }

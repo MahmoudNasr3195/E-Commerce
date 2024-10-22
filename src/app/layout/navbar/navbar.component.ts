@@ -9,10 +9,21 @@ import { SharedService } from 'src/app/shared/services/shared.service';
 export class NavbarComponent {
   lang = localStorage.getItem("lang");
   isLogin:boolean = false;
+  cartItemCount:number = 0;
 
   constructor(private _sharedService:SharedService){}
   
   ngOnInit(): void {
+    this.checkIslogin();
+    this.getCartItemCount();
+     this._sharedService.cartItemCount.subscribe(
+      (res) => {
+        this.cartItemCount = res;
+      }
+    )
+  }
+  
+  checkIslogin(){
     this._sharedService.userToken.subscribe({
       next:() =>{
        if(this._sharedService.userToken.getValue()) this.isLogin = true
@@ -20,4 +31,12 @@ export class NavbarComponent {
       }
     })
   }
+  getCartItemCount(){
+    this._sharedService.GetLoggedUserCart().subscribe({
+      next:(response) => {
+          this._sharedService.cartItemCount.next(response.numOfCartItems)
+      }
+    })
+  }
+
 }

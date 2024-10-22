@@ -24,4 +24,43 @@ export class SCartService {
         }
       })
   }
+  UpdateCartProductQuantity(productId: string, count: number): Observable<any> {
+    return this._httpClient.put(`${environment.baseUrl}/api/v1/cart/${productId}`,
+      {
+        count: count
+      }
+      ,
+      {
+        headers: {
+          token: `${this.myHearders}`
+        }
+      })
+  }
+
+  GetLoggedUserCart(): Observable<any> {
+    return this._httpClient.get(`${environment.baseUrl}/api/v1/cart`,
+      {
+        headers: {
+          token: `${this.myHearders}`
+        }
+      })
+  }
+
+  RemoveSpecificCartItem(productId: string): Observable<any> {
+    return this._httpClient.delete(`${environment.baseUrl}/api/v1/cart/${productId}`,
+      {
+        headers: {
+          token: `${this.myHearders}`
+        }
+      })
+  }
+
+  ClearUserCart(): Observable<any> {
+    return this._httpClient.delete(`${environment.baseUrl}/api/v1/cart`,
+      {
+        headers: {
+          token: `${this.myHearders}`
+        }
+      })
+  }
 }

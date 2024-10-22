@@ -60,6 +60,7 @@ export class AllProductsOnSubCategoryComponent {
   addProductToCart(id: string) {
     this._sharedService.AddProductToCart(id).subscribe({
       next: (response) => {
+        this._sharedService.cartItemCount.next(response.numOfCartItems);
         this._messageService.clear();
         this._messageService.add({
           severity: 'success',

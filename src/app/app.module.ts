@@ -10,6 +10,7 @@ import { TopBarComponent } from './layout/top-bar/top-bar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,10 +24,11 @@ import { ToastModule } from 'primeng/toast';
     BrowserAnimationsModule,
     TranslateModule.forRoot(),
     HttpClientModule,
-    ToastModule,
+    ToastModule
     ],
   providers:[
     MessageService
+
   ],
   bootstrap: [AppComponent]
 })
