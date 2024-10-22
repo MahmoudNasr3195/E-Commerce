@@ -7,15 +7,18 @@ import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-brand-details',
   templateUrl: './brand-details.component.html',
-  styleUrls: ['./brand-details.component.scss']
+  styleUrls: ['./brand-details.component.scss'],
 })
 export class BrandDetailsComponent {
-
   brandId: string = '';
   brandItem: any;
 
-  constructor(private _sbrandService: SbrandService, private _activatedRoute: ActivatedRoute, private _messageService: MessageService,
-    private _translateService: TranslateService,) { }
+  constructor(
+    private _sbrandService: SbrandService,
+    private _activatedRoute: ActivatedRoute,
+    private _messageService: MessageService,
+    private _translateService: TranslateService
+  ) {}
 
   ngOnInit(): void {
     this.getBrandId();
@@ -33,9 +36,17 @@ export class BrandDetailsComponent {
       },
       error: (error) => {
         this._messageService.clear();
-        this._messageService.add({ severity: 'error', summary: this._translateService.instant('FORM.DIALOG_MESSAGE.ERROR_MESSAGE'), detail: this._translateService.instant('FORM.DIALOG_MESSAGE.UNKNOWN_ERROR'), sticky: true });
-      }
-    })
+        this._messageService.add({
+          severity: 'error',
+          summary: this._translateService.instant(
+            'FORM.DIALOG_MESSAGE.ERROR_MESSAGE'
+          ),
+          detail: this._translateService.instant(
+            'FORM.DIALOG_MESSAGE.UNKNOWN_ERROR'
+          ),
+          sticky: true,
+        });
+      },
+    });
   }
-
 }

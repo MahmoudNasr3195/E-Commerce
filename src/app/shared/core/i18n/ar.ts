@@ -1,3 +1,5 @@
+import { CartComponent } from "src/app/views/cart/cart.component";
+
 export const locale = {
   lang: "ar",
   data: {
@@ -120,6 +122,22 @@ export const locale = {
       DESCRIPTION:'أدخل كلمة المرور الجديدة الخاصة بك',
       RESET_PASSWORD:'إعادة تعيين كلمة المرور',
       RESET_PASSWORD_SUCCESS:'تم إعادة تعيين كلمة المرور بنجاح'
+    },
+    CART:{
+      TITLE:'قائمة التسوق',
+      EMPTY_CART:'قائمة التسوق فارغة',
+      TOTAL_PRICE:'السعر الكلي',
+      CHECKOUT:'الدفع',
+      CONTINUE_SHOPPING:'متابعة التسوق',
+      REMOVE_FROM_CART:'حذف من العربة',
+      PRODUCT_DETAILS:'تفاصيل المنتج',
+      CART_TOTAL_PRICE:'السعر الاجمالي للعربة',
+      CLEAR_CART:'تفريغ العربة',
+      CART_EMPTY_MESSAGE:'قائمة التسوق فارغة',
+      ARE_YOU_SURE_TO_CLEAR_CART:'هل انت متأكد من تفريغ العربة ؟',
+      DELETE_CONFIRMATION:'تأكيد الحذف',
+      CONFIRMED:'تأكيد',
+      Cart_EMPTY_SUCCESS:'تم تفريغ العربة بنجاح',
     }
   }
 }

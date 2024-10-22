@@ -10,6 +10,7 @@ import { environment } from '../base/enviroment';
 export class SharedService {
   myHearders = localStorage.getItem('userToken');
   userToken:BehaviorSubject<string> = new BehaviorSubject('');
+  cartItemCount:BehaviorSubject<number> = new BehaviorSubject(0);
 
   constructor(private _router:Router,private _httpClient: HttpClient) {
     if(localStorage.getItem("userToken")){
@@ -35,6 +36,15 @@ export class SharedService {
         productId: productId,
       }
       ,
+      {
+        headers: {
+          token: `${this.myHearders}`
+        }
+      })
+  }
+
+  GetLoggedUserCart(): Observable<any> {
+    return this._httpClient.get(`${environment.baseUrl}/api/v1/cart`,
       {
         headers: {
           token: `${this.myHearders}`

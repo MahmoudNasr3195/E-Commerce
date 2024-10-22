@@ -77,5 +77,14 @@ a{
 .pointerCard:hover{
     cursor: pointer !important;
 }
+// ------------ Confimation Dialog --------------
+.p-dialog.p-confirm-dialog .p-confirm-dialog-message:lang(ar){
+    margin-left :unset !important;
+    margin-right: 1rem !important;
+}
+.p-dialog.p-confirm-dialog .p-confirm-dialog-message:lang(en){
+    margin-right :unset !important;
+    margin-left: 1rem !important;
+}
 
 
