@@ -20,6 +20,7 @@ export const locale = {
       CATEGORIES:'الفئات',
       SUBCATEGORIES:'الفئات الفرعية',
       BRANDS:'البرندات',
+      ORDERS:'الطلبات',
       CART:'قائمة التسوق'
     },
     FOOTER:{
@@ -138,6 +139,13 @@ export const locale = {
       DELETE_CONFIRMATION:'تأكيد الحذف',
       CONFIRMED:'تأكيد',
       Cart_EMPTY_SUCCESS:'تم تفريغ العربة بنجاح',
+      ADDRESS_DETAILS:'تفاصيل العنوان',
+      CITY:'المدينة',
+      DETAILS:'التفاصيل',
+      PHONE:'رقم الجوال',
+      CASH_ON_DELIVERY:'الدفع عند الاستلام',
+      PAY_BY_VISA:'الدفع عن طريق الفيزا',
+      ORDER_CONFIRMED:'تم تأكيد الطلب بنجاح',
     }
   }
 }
