@@ -32,7 +32,7 @@ export class LoginComponent{
   ) { }
 
   get form() {
-    return this.loginForm.controls
+    return this.loginForm.controls;
   }
 
   login(form: FormGroup) {

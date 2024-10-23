@@ -13,9 +13,10 @@ import { SharedService } from 'src/app/shared/services/shared.service';
 })
 export class CartComponent implements OnInit {
   lang = localStorage.getItem('lang');
-  CartItems: any[] = [];
-
+  cartId:string = '';
+  cartItems: any[] = [];
   totalCartPrice: any;
+
   constructor(
     private _sCartService: SCartService,
     private _messageService: MessageService,
@@ -33,9 +34,9 @@ export class CartComponent implements OnInit {
     this._sCartService.GetLoggedUserCart().subscribe({
       next: (response) => {
         if (response.status === 'success') {
-          this.CartItems = response.data.products;
+          this.cartId = response.cartId;
+          this.cartItems = response.data.products;
           this.totalCartPrice = response.data.totalCartPrice;
-          console.log(response.data);
         }
       },
       error: (err) => {
@@ -54,7 +55,9 @@ export class CartComponent implements OnInit {
     });
   }
 
-  checkout() { }
+  checkout() {
+    this._router.navigate([`/cart/checkout/${this.cartId}`]);
+  }
 
   contiueShopping() {
     this._router.navigate(['/products']);
@@ -106,7 +109,7 @@ export class CartComponent implements OnInit {
       this._sCartService.UpdateCartProductQuantity(productId, count).subscribe({
         next: (response) => {
           if (response.status === 'success') {
-            this.CartItems = response.data.products;
+            this.cartItems = response.data.products;
             this.totalCartPrice = response.data.totalCartPrice;
             this._sharedService.cartItemCount.next(response.data.products.length);
           }
@@ -132,7 +135,7 @@ export class CartComponent implements OnInit {
     this._sCartService.RemoveSpecificCartItem(productId).subscribe({
       next: (response) => {
         if (response.status === 'success') {
-          this.CartItems = response.data.products;
+          this.cartItems = response.data.products;
           this.totalCartPrice = response.data.totalCartPrice;
           this._sharedService.cartItemCount.next(response.data.products.length);
         }

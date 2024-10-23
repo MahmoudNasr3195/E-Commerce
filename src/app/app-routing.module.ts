@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'brands', canActivate: [AuthGuard], loadChildren: () => import('./views/brands/brands.module').then(m => m.BrandsModule) },
   { path: 'categories', canActivate: [AuthGuard], loadChildren: () => import('./views/categories/categories.module').then(m => m.CategoriesModule) },
   { path: 'subCategories', canActivate: [AuthGuard], loadChildren: () => import('./views/subcategories/subcategories.module').then(m => m.SubcategoriesModule) },
-  { path: 'orders', canActivate: [AuthGuard], loadChildren: () => import('./views/orders/orders.module').then(m => m.OrdersModule) },
+  { path: 'allorders', canActivate: [AuthGuard], loadChildren: () => import('./views/orders/orders.module').then(m => m.OrdersModule) },
   { path: 'cart', canActivate: [AuthGuard], loadChildren: () => import('./views/cart/cart.module').then(m => m.CartModule) },
   { path: 'wishlist', canActivate: [AuthGuard], loadChildren: () => import('./views/wishlist/wishlist.module').then(m => m.WishlistModule) },
 

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/app/shared/base/enviroment';
+import { IshippingAddress } from '../interfaces/ishipping-address';
 
 @Injectable({
   providedIn: 'root'
@@ -57,6 +58,32 @@ export class SCartService {
 
   ClearUserCart(): Observable<any> {
     return this._httpClient.delete(`${environment.baseUrl}/api/v1/cart`,
+      {
+        headers: {
+          token: `${this.myHearders}`
+        }
+      })
+  }
+
+  CreateCashOrder(cartId:string,data:IshippingAddress): Observable<any> {
+    return this._httpClient.post(`${environment.baseUrl}/api/v1/orders/${cartId}`,
+      {
+        shippingAddress: data
+      }
+      ,
+      {
+        headers: {
+          token: `${this.myHearders}`
+        }
+      })
+  }
+
+  CheckoutSession(cartId:string,data:IshippingAddress): Observable<any> {
+    return this._httpClient.post(`${environment.baseUrl}/api/v1/orders/checkout-session/${cartId}?url=http://localhost:4200`,
+      {
+        shippingAddress: data
+      }
+      ,
       {
         headers: {
           token: `${this.myHearders}`

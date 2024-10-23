@@ -7,15 +7,19 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import { RatingModule } from 'primeng/rating';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TooltipModule } from 'primeng/tooltip';
 import { ConfirmationService } from 'primeng/api';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { AutoFocusModule } from 'primeng/autofocus';
+import { InputTextModule } from 'primeng/inputtext';
 
 
 @NgModule({
   declarations: [
-    CartComponent
+    CartComponent,
+    CheckoutComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +31,10 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
     RatingModule,
     FormsModule,
     TooltipModule,
-    ConfirmDialogModule
+    ConfirmDialogModule,
+    ReactiveFormsModule,
+    AutoFocusModule,
+    InputTextModule
   ],
   providers: [ConfirmationService],
 })

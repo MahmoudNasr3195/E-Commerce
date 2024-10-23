@@ -1,6 +1,6 @@
 <p-confirmDialog />
 <div class="container cartBox">
-    <div class="cartHead" *ngIf="CartItems.length > 0">
+    <div class="cartHead" *ngIf="cartItems.length > 0">
         <div class="cart-title">
             <h4 style="font-weight:500">{{'CART.TITLE'|translate}}</h4>
             <h6>{{'CART.CART_TOTAL_PRICE'|translate}} :<span>( {{totalCartPrice | currency :"EGP" :"symbol" : '1.0-0'}}
@@ -12,8 +12,8 @@
         </div>
     </div>
 
-    <div class="cart-table" *ngIf="CartItems.length > 0 ; else emptyCart">
-        <div class="row cart-row" *ngFor="let item of CartItems;">
+    <div class="cart-table" *ngIf="cartItems.length > 0 ; else emptyCart">
+        <div class="row cart-row" *ngFor="let item of cartItems;">
 
             <div class="col-xs-12 col-md-1 d-flex justify-content-center align-items-center">
                 <img class="productImg w-full" [src]="item.product.imageCover" [alt]="item.product.title" />
@@ -44,7 +44,7 @@
     </div>
 
     <div class="cartFooter">
-        <button *ngIf="CartItems.length > 0" class="btn btn-success" (click)="checkout()">{{'CART.CHECKOUT'|translate}}
+        <button *ngIf="cartItems.length > 0" class="btn btn-success" (click)="checkout()">{{'CART.CHECKOUT'|translate}}
             <i class="pi pi-wallet mx-1"></i></button>
         <button class="btn btn-secondary" type="button" (click)="contiueShopping()">
             {{'CART.CONTINUE_SHOPPING'|translate}} <i class="pi"

@@ -18,6 +18,7 @@ export const locale = {
       CATEGORIES:'Categories',
       SUBCATEGORIES:'Sub Categories',
       BRANDS:'Brands',
+      ORDERS:'Orders',
       CART:'Cart'
     },
     FOOTER:{
@@ -138,6 +139,13 @@ export const locale = {
       DELETE_CONFIRMATION:'Delete Confirmation',
       Cart_EMPTY_SUCCESS:'Cart Cleared Successfully',
       CONFIRMED:'Confirmed',
+      ADDRESS_DETAILS:'Address Details',
+      CITY:'City',
+      PHONE:'Phone',
+      DETAILS:'Details',
+      CASH_ON_DELIVERY:'Cash On Delivery',
+      PAY_BY_VISA:'Pay By Visa',
+      ORDER_CONFIRMED:'Order Confirmed'
     }
   }
 }
