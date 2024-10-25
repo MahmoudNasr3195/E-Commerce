@@ -56,13 +56,6 @@ export class CheckoutComponent implements OnInit {
             this._sharedService.cartItemCount.next(0);
             this._router.navigate(['/home']);
           }
-        },
-        error: (err) => {
-          this._messageService.clear();
-          this._messageService.add({
-            severity: 'error', summary: this._translateService.instant('FORM.DIALOG_MESSAGE.ERROR_MESSAGE'),
-            detail: this._translateService.instant('FORM.DIALOG_MESSAGE.UNKNOWN_ERROR'), sticky: true,
-          });
         }
       })
     }
@@ -80,13 +73,6 @@ export class CheckoutComponent implements OnInit {
           if(response.status=='success'){
             window.location.href = response.session.url;
           }
-        },
-        error: (err) => {
-          this._messageService.clear();
-          this._messageService.add({
-            severity: 'error', summary: this._translateService.instant('FORM.DIALOG_MESSAGE.ERROR_MESSAGE'),
-            detail: this._translateService.instant('FORM.DIALOG_MESSAGE.UNKNOWN_ERROR'), sticky: true,
-          });
         }
       })
     }

@@ -42,8 +42,6 @@ export class AllCategoriesComponent implements OnInit {
     this._homeServiceService.getAllCategories().subscribe({
       next:(response)=>{
         this.categoryList = response.data;
-      },
-      error:(error)=>{
       }
     })
   }

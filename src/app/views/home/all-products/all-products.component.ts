@@ -35,8 +35,7 @@ export class AllProductsComponent implements OnInit {
     this._homeService.getAllProducts().subscribe({
       next: (response) => {
         this.productList = response.data;
-      },
-      error: (error) => {},
+      }
     });
   }
 
@@ -60,20 +59,7 @@ export class AllProductsComponent implements OnInit {
             'FORM.DIALOG_MESSAGE.PRODUCT_ADDED_TO_CART'
           ),
         });
-      },
-      error: (error) => {
-        this._messageService.clear();
-        this._messageService.add({
-          severity: 'error',
-          summary: this._translateService.instant(
-            'FORM.DIALOG_MESSAGE.ERROR_MESSAGE'
-          ),
-          detail: this._translateService.instant(
-            'FORM.DIALOG_MESSAGE.UNKNOWN_ERROR'
-          ),
-          sticky: true,
-        });
-      },
+      }
     });
   }
 }

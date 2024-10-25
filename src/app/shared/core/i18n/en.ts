@@ -146,6 +146,10 @@ export const locale = {
       CASH_ON_DELIVERY:'Cash On Delivery',
       PAY_BY_VISA:'Pay By Visa',
       ORDER_CONFIRMED:'Order Confirmed'
+    },
+    DATA_NOT_FOUND:{
+      TITLE:'Data Not Found',
+      DESCRIPTION:'No Data Found To Display',
     }
   }
 }

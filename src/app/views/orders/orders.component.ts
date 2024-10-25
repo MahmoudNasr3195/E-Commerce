@@ -13,6 +13,7 @@ export class OrdersComponent implements OnInit {
 
   token: string = localStorage.getItem('userToken')!;
   userInfo: UserInfo = {} as UserInfo;
+  userOrders: any[] = [];
 
   constructor(private _sOrdersService: SOrdersService) { }
 
@@ -28,10 +29,7 @@ export class OrdersComponent implements OnInit {
   getUserOrders() {
     this._sOrdersService.getUserOrders(this.userInfo.id).subscribe({
       next: (response) => {
-        console.log(response);
-      },
-      error: (err) => {
-        console.log(err);
+        this.userOrders = response;
       }
     })
   }

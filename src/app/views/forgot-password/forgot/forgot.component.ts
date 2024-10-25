@@ -71,11 +71,6 @@ export class ForgotComponent {
             this._messageService.clear();
             this._messageService.add({ severity: 'success', life: 8000, summary: this._translateService.instant('FORM.DIALOG_MESSAGE.SUCCESS'), detail: this._translateService.instant('FORGOT_PASSWORD.CODE_SENT') });
           }
-        },
-        error: (err) => {
-          this.isLoading = false;
-          this._messageService.clear();
-          this._messageService.add({ severity: 'error', life: 3000, summary: this._translateService.instant('FORM.DIALOG_MESSAGE.ERROR_MESSAGE'), detail: err.error.message, sticky: true });
         }
       })
     }
@@ -95,11 +90,6 @@ export class ForgotComponent {
           this._messageService.clear();
           this._messageService.add({ severity: 'success', life: 8000, summary: this._translateService.instant('FORM.DIALOG_MESSAGE.SUCCESS'), detail: this._translateService.instant('FORGOT_PASSWORD.CODE_SENT') });
         }
-      },
-      error: (err) => {
-        this.isLoading2 = false;
-        this._messageService.clear();
-        this._messageService.add({ severity: 'error', life: 3000, summary: this._translateService.instant('FORM.DIALOG_MESSAGE.ERROR_MESSAGE'), detail: err.error.message, sticky: true });
       }
     })
   }
@@ -119,13 +109,7 @@ export class ForgotComponent {
             this._messageService.clear();
             this._messageService.add({ severity: 'success', life: 5000, summary: this._translateService.instant('FORM.DIALOG_MESSAGE.SUCCESS'), detail: this._translateService.instant('VERIFICATION_CODE.VERFIIED_SUCCESS') });
           }
-        },
-        error: (err) => {
-          this.isLoading = false;
-          this._messageService.clear
-          this._messageService.add({ severity: 'error', life: 3000, summary: this._translateService.instant('FORM.DIALOG_MESSAGE.ERROR_MESSAGE'), detail: this._translateService.instant('VERIFICATION_CODE.CODE_EXPIRED_OR_NOT_MATCH') });
         }
-
       })
     }
   }
@@ -135,7 +119,6 @@ export class ForgotComponent {
       this.counter = this.counter - 1;
       if (this.counter === 0) clearInterval(intervalId)
     }, 1000)
-
   }
 
   resetPassword(form: FormGroup) {
@@ -154,13 +137,6 @@ export class ForgotComponent {
             localStorage.setItem("userToken", res.token);
             this._sharedService.setUserToken();
             this._router.navigate(['/home']);
-          
-        },
-        error: (err) => {
-          this.isLoading = false;
-          this._messageService.clear();
-          this._messageService.add({ severity: 'error', summary: this._translateService.instant('FORM.DIALOG_MESSAGE.ERROR_MESSAGE'), detail: err.error.message, sticky: true });
-
         }
       })
     }

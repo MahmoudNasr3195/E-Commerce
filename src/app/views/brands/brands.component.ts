@@ -27,11 +27,6 @@ export class BrandsComponent implements OnInit{
     this._sbrandService.GetAlBrands().subscribe({
       next:(response)=>{
         this.brandsList=response.data;
-      },
-      error:(error)=>{
-        this._messageService.clear();
-        this._messageService.add({ severity: 'error', summary: this._translateService.instant('FORM.DIALOG_MESSAGE.ERROR_MESSAGE'), detail: this._translateService.instant('FORM.DIALOG_MESSAGE.UNKNOWN_ERROR'), sticky: true });
-
       }
     })
   }

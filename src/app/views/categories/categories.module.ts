@@ -19,6 +19,7 @@ import { TagModule } from 'primeng/tag';
 import { TooltipModule } from 'primeng/tooltip';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { SearchByPipe } from 'src/app/shared/pipes/search-by.pipe';
+import { DataNotFoundComponent } from 'src/app/shared/components/data-not-found/data-not-found.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { SearchByPipe } from 'src/app/shared/pipes/search-by.pipe';
     GalleriaModule,
     BreadcrumbModule,
     ProgressSpinnerModule,
-    SearchByPipe
+    SearchByPipe,
+    DataNotFoundComponent
   ]
 })
 export class CategoriesModule { }

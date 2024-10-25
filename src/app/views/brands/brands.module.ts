@@ -8,13 +8,14 @@ import { TranslateModule } from '@ngx-translate/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { CardModule } from 'primeng/card';
+import { DataNotFoundComponent } from 'src/app/shared/components/data-not-found/data-not-found.component';
 
 
 @NgModule({
   declarations: [
     BrandsComponent,
     BrandDetailsComponent
-  ],
+    ],
   imports: [
     CommonModule,
     BrandsRoutingModule,
@@ -22,7 +23,7 @@ import { CardModule } from 'primeng/card';
     HttpClientModule,
     ProgressSpinnerModule,
     CardModule,
-
+    DataNotFoundComponent
   ]
 })
 export class BrandsModule { }

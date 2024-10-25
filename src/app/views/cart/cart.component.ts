@@ -38,20 +38,7 @@ export class CartComponent implements OnInit {
           this.cartItems = response.data.products;
           this.totalCartPrice = response.data.totalCartPrice;
         }
-      },
-      error: (err) => {
-        this._messageService.clear();
-        this._messageService.add({
-          severity: 'error',
-          summary: this._translateService.instant(
-            'FORM.DIALOG_MESSAGE.ERROR_MESSAGE'
-          ),
-          detail: this._translateService.instant(
-            'FORM.DIALOG_MESSAGE.UNKNOWN_ERROR'
-          ),
-          sticky: true,
-        });
-      },
+      }
     });
   }
 
@@ -83,20 +70,7 @@ export class CartComponent implements OnInit {
               this._messageService.clear();
               this._messageService.add({ severity: 'success', summary: this._translateService.instant('CART.CONFIRMED'), detail: this._translateService.instant('CART.Cart_EMPTY_SUCCESS') });
             }
-          },
-          error: (err) => {
-            this._messageService.clear();
-            this._messageService.add({
-              severity: 'error',
-              summary: this._translateService.instant(
-                'FORM.DIALOG_MESSAGE.ERROR_MESSAGE'
-              ),
-              detail: this._translateService.instant(
-                'FORM.DIALOG_MESSAGE.UNKNOWN_ERROR'
-              ),
-              sticky: true,
-            });
-          },
+          }
         });
       },
       reject: () => {
@@ -113,20 +87,7 @@ export class CartComponent implements OnInit {
             this.totalCartPrice = response.data.totalCartPrice;
             this._sharedService.cartItemCount.next(response.data.products.length);
           }
-        },
-        error: (err) => {
-          this._messageService.clear();
-          this._messageService.add({
-            severity: 'error',
-            summary: this._translateService.instant(
-              'FORM.DIALOG_MESSAGE.ERROR_MESSAGE'
-            ),
-            detail: this._translateService.instant(
-              'FORM.DIALOG_MESSAGE.UNKNOWN_ERROR'
-            ),
-            sticky: true,
-          });
-        },
+        }
       });
     }
   }
@@ -139,20 +100,7 @@ export class CartComponent implements OnInit {
           this.totalCartPrice = response.data.totalCartPrice;
           this._sharedService.cartItemCount.next(response.data.products.length);
         }
-      },
-      error: (err) => {
-        this._messageService.clear();
-        this._messageService.add({
-          severity: 'error',
-          summary: this._translateService.instant(
-            'FORM.DIALOG_MESSAGE.ERROR_MESSAGE'
-          ),
-          detail: this._translateService.instant(
-            'FORM.DIALOG_MESSAGE.UNKNOWN_ERROR'
-          ),
-          sticky: true,
-        });
-      },
+      }
     });
   }
 }

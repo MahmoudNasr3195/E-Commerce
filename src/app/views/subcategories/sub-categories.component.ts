@@ -23,8 +23,7 @@ export class SubCategoriesComponent {
     this._subCategoriesService.getAllSubcategories().subscribe({
       next: (response) => {
         this.subCategoryList = response.data;
-      },
-      error: (error) => { }
+      }
     })
   }
 

@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div class="row no-gutters" *ngIf="productItem ; else loading">
+    <div class="row no-gutters" *ngIf="productItem ; else noData">
         <div class="col-12">
             <div class="card flex justify-content-center">
                 <p-breadcrumb class="max-w-full" [model]="items" [home]="home"></p-breadcrumb>
@@ -43,7 +43,7 @@
     <div class="row no-gutters">
         <div class="card" style="border: unset;">
             <p-dataView #dv [value]="relatedProducts" [layout]="layout"
-                *ngIf="relatedProducts.length > 0 ; else loading">
+                *ngIf="relatedProducts.length > 0 ; else noData">
                 <ng-template pTemplate="header">
                     <div class="flex justify-content-start">
                         <h4>{{'PRODUCTS.RELATED_PRODUCT' | translate}}</h4>
@@ -141,13 +141,7 @@
             </p-dataView>
         </div>
     </div>
-    <ng-template #loading>
-        <div class="vh-100 d-flex justify-content-center align-items-center">
-            <!-- <i class="pi pi-spin pi-spinner text-main" style="font-size: 5rem"></i> -->
-            <div class="flex justify-content-center">
-                <p-progressSpinner aria-label="Loading" styleClass="w-5rem h-5rem" strokeWidth="4"
-                    fill="var(--surface-ground)" animationDuration=".5s" />
-            </div>
-        </div>
-    </ng-template>
 </div>
+<ng-template #noData>
+    <app-data-not-found></app-data-not-found>
+</ng-template>

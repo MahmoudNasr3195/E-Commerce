@@ -28,8 +28,7 @@ export class AllSubCategoryOnCategoryComponent implements OnInit {
     this._categoriesService.getAllSubCategoriesOnCategory(categoryId).subscribe({
       next: (response) => {
         this.subCategoryOnCategoryList = response.data;
-      },
-      error: (error) => { }
+      }
     })
   }
 }

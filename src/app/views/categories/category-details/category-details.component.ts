@@ -26,8 +26,7 @@ export class CategoryDetailsComponent implements OnInit {
     this._categoriesService.getSpecificCategory(id).subscribe({
       next:(response)=>{
         this.categoryItem = response.data;
-      },
-      error:(error)=>{}
+      }
     })
   }
 

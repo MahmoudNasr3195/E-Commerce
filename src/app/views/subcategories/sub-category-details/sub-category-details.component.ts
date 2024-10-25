@@ -26,8 +26,7 @@ export class SubCategoryDetailsComponent {
     this._subCategoriesService.getSpecificSubCategory(subcategoryId).subscribe({
       next: (response) => {
         this.subcategoryItem = response.data;
-      },
-      error: (error) => { }
+      }
     })
   }
 
