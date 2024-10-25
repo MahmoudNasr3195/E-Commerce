@@ -8,10 +8,12 @@ import { environment } from '../base/enviroment';
   providedIn: 'root'
 })
 export class SharedService {
-  myHearders = localStorage.getItem('userToken');
+
   userToken:BehaviorSubject<string> = new BehaviorSubject('');
   cartItemCount:BehaviorSubject<number> = new BehaviorSubject(0);
+  wishlistItemCount:BehaviorSubject<number> = new BehaviorSubject(0);
 
+  
   constructor(private _router:Router,private _httpClient: HttpClient) {
     if(localStorage.getItem("userToken")){
       let token = JSON.stringify(localStorage.getItem('userToken'));
@@ -30,25 +32,25 @@ export class SharedService {
     this._router.navigate(['/login']);
   }
 
+  GetLoggedUserCart(): Observable<any> {
+    return this._httpClient.get(`${environment.baseUrl}/api/v1/cart`)
+  }
+
   AddProductToCart(productId: string): Observable<any> {
     return this._httpClient.post(`${environment.baseUrl}/api/v1/cart`,
       {
         productId: productId,
-      }
-      ,
-      {
-        headers: {
-          token: `${this.myHearders}`
-        }
       })
   }
 
-  GetLoggedUserCart(): Observable<any> {
-    return this._httpClient.get(`${environment.baseUrl}/api/v1/cart`,
+  GetLoggedUserWishlist(): Observable<any> {
+    return this._httpClient.get(`${environment.baseUrl}/api/v1/wishlist`)
+  }
+
+  AddProductToWishlist(productId: string): Observable<any> {
+    return this._httpClient.post(`${environment.baseUrl}/api/v1/wishlist`,
       {
-        headers: {
-          token: `${this.myHearders}`
-        }
+        productId: productId,
       })
   }
 }

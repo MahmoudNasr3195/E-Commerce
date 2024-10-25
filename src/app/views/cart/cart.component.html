@@ -50,14 +50,13 @@
             {{'CART.CONTINUE_SHOPPING'|translate}} <i class="pi"
                 [ngClass]="lang=='ar'?'pi-arrow-left':'pi-arrow-right'"></i></button>
     </div>
-
-    <ng-template #emptyCart>
-        <div class="alert alert-warning" role="alert">
-            <h5>
-                <i class="pi pi-shopping-cart fs-5"></i>
-                {{'CART.CART_EMPTY_MESSAGE'|translate}}
-            </h5>
-        </div>
-    </ng-template>
-
 </div>
+
+<ng-template #emptyCart>
+    <div class="alert alert-warning" role="alert">
+        <h5>
+            <i class="pi pi-shopping-cart fs-5"></i>
+            {{'CART.CART_EMPTY_MESSAGE'|translate}}
+        </h5>
+    </div>
+</ng-template>

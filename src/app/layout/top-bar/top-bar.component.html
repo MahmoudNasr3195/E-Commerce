@@ -13,7 +13,7 @@
                 <a routerLink="wishlist" class="wishlist" *ngIf="isLogin">
                     <img src="./assets/imges/topbar/heart.svg">
                     <span>{{'TOPBAR.WISHLIST' | translate}}</span>
-                    <span class="badge">99</span>
+                    <span class="badge">{{wishListItemmCount}}</span>
                 </a>
                 <a routerLink="contact" class="help d-none d-md-block">
                     <img src="./assets/imges/topbar/info.svg">
