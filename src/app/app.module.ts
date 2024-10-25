@@ -15,6 +15,7 @@ import { LoadingInterceptor } from './shared/interceptors/loading/loading.interc
 import { ErrorsInterceptor } from './shared/interceptors/errors/errors.interceptor';
 import { MyheadersInterceptor } from './shared/interceptors/Headers/myheaders.interceptor';
 import { DataNotFoundComponent } from './shared/components/data-not-found/data-not-found.component';
+import { DynamicTremStringPipe } from './shared/pipes/dynamic-trem-string.pipe';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { DataNotFoundComponent } from './shared/components/data-not-found/data-n
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    TopBarComponent
+    TopBarComponent,
+    DynamicTremStringPipe
     ],
   imports: [
     BrowserModule,
