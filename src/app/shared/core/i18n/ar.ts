@@ -146,6 +146,10 @@ export const locale = {
       CASH_ON_DELIVERY:'الدفع عند الاستلام',
       PAY_BY_VISA:'الدفع عن طريق الفيزا',
       ORDER_CONFIRMED:'تم تأكيد الطلب بنجاح',
+    },
+    DATA_NOT_FOUND:{
+      TITLE:'لا يوجد بيانات',
+      DESCRIPTION:'لا يوجد بيانات لعرضها'
     }
   }
 }

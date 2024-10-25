@@ -86,8 +86,7 @@ export class ProductDetailsComponent implements OnInit {
           },
         ];
         this.home = { icon: 'pi pi-home', routerLink: '/' };
-      },
-      error: (error) => {},
+      }
     });
   }
   getrelatedProducts() {
@@ -97,8 +96,7 @@ export class ProductDetailsComponent implements OnInit {
         this.relatedProducts = this.productList.filter(
           (p) => p.subcategory[0]._id == this.productItem?.subcategory[0]?._id
         );
-      },
-      error: (error) => {},
+      }
     });
   }
   contentLoadedInterval() {
@@ -127,20 +125,7 @@ export class ProductDetailsComponent implements OnInit {
             'FORM.DIALOG_MESSAGE.PRODUCT_ADDED_TO_CART'
           ),
         });
-      },
-      error: (error) => {
-        this._messageService.clear();
-        this._messageService.add({
-          severity: 'error',
-          summary: this._translateService.instant(
-            'FORM.DIALOG_MESSAGE.ERROR_MESSAGE'
-          ),
-          detail: this._translateService.instant(
-            'FORM.DIALOG_MESSAGE.UNKNOWN_ERROR'
-          ),
-          sticky: true,
-        });
-      },
+      }
     });
   }
 }

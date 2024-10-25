@@ -24,8 +24,6 @@ export class CategoriesComponent {
     this._categoriesService.getAllCategories().subscribe({
       next:(response)=>{
         this.categoryList = response.data;
-      },
-      error:(error)=>{
       }
     })
   }

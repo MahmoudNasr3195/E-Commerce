@@ -53,11 +53,6 @@ export class RegisterComponent{
             this._messageService.add({ severity: 'success', summary: this._translateService.instant('FORM.DIALOG_MESSAGE.SUCCESS'), detail:this._translateService.instant('FORM.DIALOG_MESSAGE.REGISTRATION_SUCCESS')});
             this._router.navigate(['/home']);
           }
-        },
-        error :(err)=> {
-          this.isLoading = false;
-          this._messageService.clear();
-          this._messageService.add({ severity: 'error', summary: this._translateService.instant('FORM.DIALOG_MESSAGE.ERROR_MESSAGE'), detail: err.error.message ,sticky: true });
         }
       })
     }

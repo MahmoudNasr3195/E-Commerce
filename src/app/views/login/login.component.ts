@@ -50,11 +50,6 @@ export class LoginComponent{
             this._sharedService.setUserToken();
             this._router.navigate(['/home']);
           }
-        },
-        error: (err) => {
-          this.isLoading = false;
-          this._messageService.clear();
-          this._messageService.add({ severity: 'error', summary: this._translateService.instant('FORM.DIALOG_MESSAGE.ERROR_MESSAGE'), detail: this._translateService.instant('FORM.DIALOG_MESSAGE.INCORRECT_EMAIL_OR_PASSWORD'), sticky: true });
         }
       })
     }
