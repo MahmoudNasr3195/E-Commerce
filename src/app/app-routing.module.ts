@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'allorders', canActivate: [AuthGuard], loadChildren: () => import('./views/orders/orders.module').then(m => m.OrdersModule) },
   { path: 'cart', canActivate: [AuthGuard], loadChildren: () => import('./views/cart/cart.module').then(m => m.CartModule) },
   { path: 'wishlist', canActivate: [AuthGuard], loadChildren: () => import('./views/wishlist/wishlist.module').then(m => m.WishlistModule) },
-
+  { path: 'contact', canActivate: [AuthGuard], loadChildren: () => import('./views/contact-us/contact-us.module').then(m => m.ContactUsModule) },
 
   { path: '**', loadChildren: () => import('./views/error404/error404.module').then(m => m.Error404Module) }
 ];
