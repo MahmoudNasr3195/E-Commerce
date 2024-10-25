@@ -64,6 +64,7 @@ export const locale = {
         INCORRECT_EMAIL_OR_PASSWORD:'الايميل او كلمة المرور غير صحيحة',
         UNKNOWN_ERROR:'خطأ غير معروف',
         PRODUCT_ADDED_TO_CART:'تم اضافة المنتج الي العربة بنجاح',
+        PRODUCT_ADDED_TO_WISHLIST:'تم اضافة المنتج الي المفضلة بنجاح',
       }
     },
     LOGIN:{
@@ -150,6 +151,18 @@ export const locale = {
     DATA_NOT_FOUND:{
       TITLE:'لا يوجد بيانات',
       DESCRIPTION:'لا يوجد بيانات لعرضها'
+    },
+    WISHLIST:{
+      TITLE:'قائمة المفضلة',
+      EMPTY_WISHLIST:'المفضلة فارغة',
+      REMOVE_FROM_WISHLIST:'حذف من المفضلة',
+      PRODUCT_DETAILS:'تفاصيل المنتج',
+      WISHLIST_EMPTY_MESSAGE:'المفضلة فارغة',
+      ARE_YOU_SURE_TO_REMOVE_FROM_WISHLIST:'هل انت متأكد من حذف المنتج من المفضلة ؟',
+      DELETE_CONFIRMATION:'تأكيد الحذف',
+      CONFIRMED:'تأكيد',
+      WISHLIST_EMPTY_SUCCESS:'تم حذف المنتج من المفضلة بنجاح',
+      ADD_TO_CART:'اضف الي العربة'
     }
   }
 }

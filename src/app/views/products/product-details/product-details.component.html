@@ -34,7 +34,8 @@
                 <div class="d-flex flex-row justify-content-center">
                     <button (click)="addProductToCart(productItem.id)" pButton icon="pi pi-shopping-cart mx-1"
                         class="btn-main">{{'PRODUCTS.ADD_TO_CART' | translate}}</button>
-                    <button pButton icon="pi pi-heart mx-1" class="btn-main">{{'PRODUCTS.ADD_TO_WISHLIST' |
+                    <button pButton (click)="addProductToWishList(productItem.id)" icon="pi pi-heart mx-1"
+                        class="btn-main">{{'PRODUCTS.ADD_TO_WISHLIST' |
                         translate}}</button>
                 </div>
             </div>
@@ -88,7 +89,8 @@
                                         pTooltip="{{'PRODUCTS.ADD_TO_CART' | translate}}" tooltipPosition="top" pButton
                                         icon="pi pi-shopping-cart"
                                         class="md:align-self-end mb-2 p-button-rounded btn-main"></button>
-                                    <button pTooltip="{{'PRODUCTS.ADD_TO_WISHLIST' | translate}}" tooltipPosition="top"
+                                    <button (click)="addProductToWishList(productItem.id)"
+                                        pTooltip="{{'PRODUCTS.ADD_TO_WISHLIST' | translate}}" tooltipPosition="top"
                                         pButton icon="pi pi-heart"
                                         class="md:align-self-end mb-2 p-button-rounded btn-main"></button>
                                 </div>
@@ -130,7 +132,8 @@
                                         pTooltip="{{'PRODUCTS.ADD_TO_CART' | translate}}" tooltipPosition="top" pButton
                                         icon="pi pi-shopping-cart"
                                         class="md:align-self-end mb-2 p-button-rounded btn-main"></button>
-                                    <button pTooltip="{{'PRODUCTS.ADD_TO_WISHLIST' | translate}}" tooltipPosition="top"
+                                    <button (click)="addProductToWishList(productItem.id)"
+                                        pTooltip="{{'PRODUCTS.ADD_TO_WISHLIST' | translate}}" tooltipPosition="top"
                                         pButton icon="pi pi-heart"
                                         class="md:align-self-end mb-2 p-button-rounded btn-main"></button>
                                 </div>

@@ -16,11 +16,7 @@ export class NavbarComponent {
   ngOnInit(): void {
     this.checkIslogin();
     this.getCartItemCount();
-     this._sharedService.cartItemCount.subscribe(
-      (res) => {
-        this.cartItemCount = res;
-      }
-    )
+    this.SetCartItemCount();
   }
   
   checkIslogin(){
@@ -31,12 +27,21 @@ export class NavbarComponent {
       }
     })
   }
+
   getCartItemCount(){
     this._sharedService.GetLoggedUserCart().subscribe({
       next:(response) => {
           this._sharedService.cartItemCount.next(response.numOfCartItems)
       }
     })
+  }
+
+  SetCartItemCount(){
+    this._sharedService.cartItemCount.subscribe(
+      (res) => {
+        this.cartItemCount = res;
+      }
+    )
   }
 
 }

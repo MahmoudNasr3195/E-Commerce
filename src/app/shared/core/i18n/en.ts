@@ -62,6 +62,7 @@ export const locale = {
         INCORRECT_EMAIL_OR_PASSWORD:'Incorrect Email Or Password',
         UNKNOWN_ERROR:'Unknown Error',
         PRODUCT_ADDED_TO_CART:'Product Added To Cart Successfully',
+        PRODUCT_ADDED_TO_WISHLIST:'Product Added To Wishlist Successfully',
       }
     },
     LOGIN:{
@@ -150,6 +151,18 @@ export const locale = {
     DATA_NOT_FOUND:{
       TITLE:'Data Not Found',
       DESCRIPTION:'No Data Found To Display',
+    },
+    WISHLIST:{
+      TITLE:'Wishlist',
+      EMPTY_WISHLIST:'Your Wishlist Is Empty',
+      REMOVE_FROM_WISHLIST:'Remove From Wishlist',
+      PRODUCT_DETAILS:'Product Details',
+      WISHLIST_EMPTY_MESSAGE:'Your Wishlist Is Empty',
+      ARE_YOU_SURE_TO_REMOVE_FROM_WISHLIST:'Are You Sure To Remove From Wishlist ?',
+      DELETE_CONFIRMATION:'Delete Confirmation',
+      CONFIRMED:'Confirmed',
+      WISHLIST_EMPTY_SUCCESS:'Wishlist Cleared Successfully',
+      ADD_TO_CART:'Add To Cart'
     }
   }
 }

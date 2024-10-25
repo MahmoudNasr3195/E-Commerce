@@ -128,4 +128,22 @@ export class ProductDetailsComponent implements OnInit {
       }
     });
   }
+
+  addProductToWishList(id: string) {
+    this._sharedService.AddProductToWishlist(id).subscribe({
+      next: (response) => {
+        this._sharedService.wishlistItemCount.next(response.data.length);
+        this._messageService.clear();
+        this._messageService.add({
+          severity: 'success',
+          summary: this._translateService.instant(
+            'FORM.DIALOG_MESSAGE.SUCCESS'
+          ),
+          detail: this._translateService.instant(
+            'FORM.DIALOG_MESSAGE.PRODUCT_ADDED_TO_WISHLIST'
+          ),
+        });
+      }
+    });
+  }
 }

@@ -52,8 +52,9 @@
                                         pTooltip="{{'PRODUCTS.ADD_TO_CART' | translate}}" tooltipPosition="top" pButton
                                         icon="pi pi-shopping-cart"
                                         class="md:align-self-end mb-1 p-button-rounded btn-main"></button>
-                                    <button type="button" pTooltip="{{'PRODUCTS.ADD_TO_WISHLIST' | translate}}"
-                                        tooltipPosition="top" pButton icon="pi pi-heart"
+                                    <button type="button" (click)="addProductToWishList(product.id)"
+                                        pTooltip="{{'PRODUCTS.ADD_TO_WISHLIST' | translate}}" tooltipPosition="top"
+                                        pButton icon="pi pi-heart"
                                         class="md:align-self-end mb-1 p-button-rounded btn-main"></button>
                                     <a [routerLink]="['/products/productDetails',product.title,product._id]">
                                         <button type="button" pTooltip="{{'PRODUCTS.PRODUCT_DETAILS' | translate}}"
@@ -99,7 +100,8 @@
                                         pTooltip="{{'PRODUCTS.ADD_TO_CART' | translate}}" tooltipPosition="top" pButton
                                         icon="pi pi-shopping-cart"
                                         class="md:align-self-end mb-1 p-button-rounded btn-main"></button>
-                                    <button pTooltip="{{'PRODUCTS.ADD_TO_WISHLIST' | translate}}" tooltipPosition="top"
+                                    <button (click)="addProductToWishList(product.id)"
+                                        pTooltip="{{'PRODUCTS.ADD_TO_WISHLIST' | translate}}" tooltipPosition="top"
                                         pButton icon="pi pi-heart"
                                         class="md:align-self-end mb-1 p-button-rounded btn-main"></button>
                                     <a [routerLink]="['/products/productDetails',product.title,product._id]">

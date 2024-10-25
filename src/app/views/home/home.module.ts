@@ -18,6 +18,7 @@ import { TagModule } from 'primeng/tag';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { SearchByPipe } from 'src/app/shared/pipes/search-by.pipe';
+import { DataNotFoundComponent } from 'src/app/shared/components/data-not-found/data-not-found.component';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -39,7 +40,8 @@ import { SearchByPipe } from 'src/app/shared/pipes/search-by.pipe';
     TagModule,
     FormsModule,
     ButtonModule,
-    SearchByPipe
+    SearchByPipe,
+    DataNotFoundComponent
     ]
 })
 export class HomeModule { }

@@ -11,12 +11,21 @@ import { UtilService } from 'src/app/shared/services/util.service';
 export class TopBarComponent implements OnInit {
   lang: string = '';
   isLogin:boolean = false;
+  wishListItemmCount:number = 0;
+
   constructor(
     private _utilService: UtilService,
     private _translationService: TranslationService,
     private _sharedService:SharedService
   ){}
+
   ngOnInit(): void {
+    this.getuserToken();
+    this.GetLoggedUserWishlist();
+    this.SetWishlistItemCount();
+  }
+
+  getuserToken(){
     this._sharedService.userToken.subscribe({
       next:() =>{
        if(this._sharedService.userToken.getValue()) this.isLogin = true
@@ -45,6 +54,22 @@ export class TopBarComponent implements OnInit {
     //this.reloadCurrentRoute();
     // Lang
     this.lang = lang;
+  }
+
+  GetLoggedUserWishlist(){
+    this._sharedService.GetLoggedUserWishlist().subscribe({
+      next:(response) => {
+        this._sharedService.wishlistItemCount.next(response.count)
+      }
+    })
+  }
+
+  SetWishlistItemCount(){
+    this._sharedService.wishlistItemCount.subscribe(
+      (res) => {
+        this.wishListItemmCount = res;
+      }
+    )
   }
 
   signOut(){
