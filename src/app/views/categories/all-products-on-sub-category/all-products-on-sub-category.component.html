@@ -40,13 +40,13 @@
                                 </div>
                                 <div class="flex sm:flex-column align-items-center sm:align-items-end gap-3 sm:gap-2">
                                     <span *ngIf="!product.priceAfterDiscount"
-                                        class="text-xl font-semibold">{{product.price | currency:'EGP'}}</span>
+                                        class="text-xl font-semibold">{{product.price | currency :'EGY' :"symbol" : '1.0-0'}}</span>
                                     <div *ngIf="product.priceAfterDiscount"
                                         class="d-flex flex-column align-items-center">
                                         <span class="text-xl font-semibold text-danger">{{product.priceAfterDiscount
-                                            | currency:'EGP'}}</span>
+                                            | currency :'EGY' :"symbol" : '1.0-0'}}</span>
                                         <span class="text-xs font-semibold text-decoration-line-through">{{product.price
-                                            | currency:'EGP'}}</span>
+                                            | currency :'EGY' :"symbol" : '1.0-0'}}</span>
                                     </div>
                                     <button type="button" (click)="addProductToCart(product.id)"
                                         pTooltip="{{'PRODUCTS.ADD_TO_CART' | translate}}" tooltipPosition="top" pButton
@@ -88,12 +88,12 @@
                             </div>
                             <div class="flex align-items-center justify-content-between">
                                 <span *ngIf="!product.priceAfterDiscount" class="text-xl font-semibold">{{product.price
-                                    | currency:'EGP'}}</span>
+                                    | currency :'EGY' :"symbol" : '1.0-0'}}</span>
                                 <div *ngIf="product.priceAfterDiscount" class="d-flex flex-column align-items-center">
                                     <span class="text-xl font-semibold text-danger">{{product.priceAfterDiscount |
-                                        currency:'EGP'}}</span>
+                                        currency :'EGY' :"symbol" : '1.0-0'}}</span>
                                     <span class="text-xs font-semibold text-decoration-line-through">{{product.price
-                                        | currency:'EGP'}}</span>
+                                        | currency :'EGY' :"symbol" : '1.0-0'}}</span>
                                 </div>
                                 <div class="btns">
                                     <button (click)="addProductToCart(product.id)"
