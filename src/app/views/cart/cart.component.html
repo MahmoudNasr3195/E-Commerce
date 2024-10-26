@@ -21,7 +21,7 @@
             <div class="col-xs-12 col-md-6">
                 <div class="product-name">{{ item.product.title }}</div>
                 <p-rating [(ngModel)]="item.product.ratingsAverage" [readonly]="true" [cancel]="false"></p-rating>
-                <div class="product-price"><small>{{item.price | currency : 'EGY'}}</small></div>
+                <div class="product-price"><small>{{item.price | currency :'EGY' :"symbol" : '1.0-0'}}</small></div>
             </div>
             <div class="col-xs-12 col-md-3">
                 <div class="product-count">
@@ -31,7 +31,7 @@
                     <button class="btn d-flex justify-content-center align-items-center"
                         (click)="UpdateCartProductQuantity(item.product.id,item.count-1)"><i class="pi pi-minus"></i></button>
                 </div>
-                <div class="product-total-price"><small>{{item.price * item.count | currency : 'EGY'}}</small></div>
+                <div class="product-total-price"><small>{{item.price * item.count | currency :'EGY' :"symbol" : '1.0-0'}}</small></div>
             </div>
             <div class="col-xs-12 col-md-2 cart-actions">
                 <div class="product-delete">

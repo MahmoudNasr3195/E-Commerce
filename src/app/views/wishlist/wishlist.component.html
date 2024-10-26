@@ -13,7 +13,7 @@
                 <p-rating [(ngModel)]="item.ratingsAverage" [readonly]="true" [cancel]="false"></p-rating>
             </div>
             <div class="col-xs-12 col-md-3">
-                <div class="product-price"><small>{{item.price | currency : 'EGY'}}</small></div>
+                <div class="product-price"><small>{{item.price | currency :'EGY' :"symbol" : '1.0-0'}}</small></div>
             </div>
             <div class="col-xs-12 col-md-2 wishList-actions">
                 <button type="button" class="btn btn-primary" (click)="AddProductToCart(item.id);"
